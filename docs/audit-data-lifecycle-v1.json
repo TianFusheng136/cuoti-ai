@@ -1,0 +1,20 @@
+{
+  "question_id": "c988f819-c953-4e47-9f1a-e9170f5a6a9e",
+  "modified_confirmation": {
+    "confirmed_text": "审计用临时题：1+1=？（人工修正标点）",
+    "subject": "小学数学",
+    "user_answer": "2",
+    "user_solution": "1加1等于2"
+  },
+  "delete_status": 204,
+  "read_after_delete_status": 404,
+  "database_residual_rows": {
+    "questions": 0,
+    "question_confirmations": 0,
+    "recognition_runs": 0,
+    "analysis_runs": 0,
+    "variation_runs": 0,
+    "question_learning": 0,
+    "review_events": 0
+  }
+}

@@ -1,0 +1,33 @@
+# 本地数据与密钥
+data/*
+!data/.gitkeep
+.env
+*.key
+*.enc
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/*.tsbuildinfo
+/frontend/NUL
+
+# Release
+release/
+packaging/output/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

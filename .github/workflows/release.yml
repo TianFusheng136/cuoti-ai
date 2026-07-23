@@ -1,0 +1,56 @@
+name: Windows Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-lock.txt
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Create build environment
+        shell: pwsh
+        run: |
+          python -m venv .venv
+          .venv\Scripts\python -m pip install --require-hashes -r requirements-lock.txt
+          .venv\Scripts\python -m pip install --no-deps -e .
+
+      - name: Build and smoke-test portable release
+        shell: pwsh
+        run: .\scripts\build-release.ps1
+
+      - name: Attest ZIP provenance
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: packaging/output/AIErrorReviewWorkbench-windows-x64.zip
+
+      - name: Publish GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create $env:GITHUB_REF_NAME `
+            packaging/output/AIErrorReviewWorkbench-windows-x64.zip `
+            packaging/output/SHA256SUMS.txt `
+            sbom/python.cdx.json `
+            sbom/frontend.cdx.json `
+            --generate-notes --verify-tag

@@ -1,0 +1,27 @@
+{
+  "started_at": "2026-07-23T06:59:32.298400+00:00",
+  "base_url": "http://127.0.0.1:3002/api/v1",
+  "policy": "public APIs only; no database edits; real configured provider",
+  "original_nine_runs": [
+    {
+      "name": "抛物线面积最值图片题",
+      "question_id": "241df39e-40c9-496f-9851-456ebe5b90d2",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 502,
+          "elapsed_ms": 662819,
+          "success": false,
+          "failure": "部分变式题定向重试 4 次后仍未通过：同知识点巩固：候选答案中 △PAC 面积的最大值计算错误，应为 9 而非 1。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        }
+      ],
+      "success_count": 0
+    }
+  ],
+  "blind_cases": [],
+  "health": {
+    "status": "ok",
+    "app_name": "AI 错题复盘工作台",
+    "api_version": "v1"
+  }
+}

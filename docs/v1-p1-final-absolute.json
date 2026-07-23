@@ -1,0 +1,168 @@
+{
+  "tested_at": "2026-07-23T07:43:19.986508+00:00",
+  "question_id": "5fad8eb1-2f78-4a02-836c-9421059de6ca",
+  "runs": [
+    {
+      "run": 1,
+      "status": 200,
+      "elapsed_ms": 81,
+      "body": {
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "绝对值方程基础巩固",
+            "question": "解方程：|3x+2|=7。",
+            "answer": "x=5/3 或 x=-3。",
+            "solution": "由绝对值定义，3x+2=7或3x+2=-7。分别解得x=5/3或x=-3。将两个解代回，绝对值均为7，所以解集完整。",
+            "knowledge_points": [
+              "绝对值方程",
+              "一元一次方程"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "new_context",
+            "title": "数轴上的定距点",
+            "question": "数轴上点A表示的数为-2，点P表示实数x。已知A、P两点的距离为3个单位长度，求x的所有可能值。",
+            "answer": "x=1 或 x=-5。",
+            "solution": "数轴上两点距离为|x-(-2)|，所以|x-(-2)|=3。因此x-(-2)=3或x-(-2)=-3，解得x=1或x=-5。",
+            "knowledge_points": [
+              "绝对值方程",
+              "数轴上的距离",
+              "一元一次方程"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "challenge",
+            "title": "含参数绝对值方程分类讨论",
+            "question": "已知a为实数，讨论关于x的方程|2x-5|=a在a取不同值时的解，并写出全部解。",
+            "answer": "a<0时无解；a=0时x=5/2；a>0时x=(5+a)/2或x=(5-a)/2。",
+            "solution": "绝对值非负，因此a<0时无解。a=0时绝对值内部必须为0，故x=5/2。a>0时，2x-5=a或2x-5=-a，解得x=(5+a)/2或x=(5-a)/2。",
+            "knowledge_points": [
+              "绝对值方程",
+              "参数讨论",
+              "分类思想"
+            ],
+            "difficulty": "medium"
+          }
+        ],
+        "id": "d2645a29-1f98-46f2-a3ca-606202554f5f",
+        "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+        "model_name": "deterministic-absolute-v1",
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "duration_ms": 0,
+        "created_at": "2026-07-23T07:43:19.970471"
+      }
+    },
+    {
+      "run": 2,
+      "status": 200,
+      "elapsed_ms": 5,
+      "body": {
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "绝对值方程基础巩固",
+            "question": "解方程：|5x+3|=8。",
+            "answer": "x=1 或 x=-11/5。",
+            "solution": "由绝对值定义，5x+3=8或5x+3=-8。分别解得x=1或x=-11/5。将两个解代回，绝对值均为8，所以解集完整。",
+            "knowledge_points": [
+              "绝对值方程",
+              "一元一次方程"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "new_context",
+            "title": "数轴上的定距点",
+            "question": "数轴上点A表示的数为-2，点P表示实数x。已知A、P两点的距离为3个单位长度，求x的所有可能值。",
+            "answer": "x=1 或 x=-5。",
+            "solution": "数轴上两点距离为|x-(-2)|，所以|x-(-2)|=3。因此x-(-2)=3或x-(-2)=-3，解得x=1或x=-5。",
+            "knowledge_points": [
+              "绝对值方程",
+              "数轴上的距离",
+              "一元一次方程"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "challenge",
+            "title": "含参数绝对值方程分类讨论",
+            "question": "已知a为实数，讨论关于x的方程|2x-3|=a在a取不同值时的解，并写出全部解。",
+            "answer": "a<0时无解；a=0时x=3/2；a>0时x=(3+a)/2或x=(3-a)/2。",
+            "solution": "绝对值非负，因此a<0时无解。a=0时绝对值内部必须为0，故x=3/2。a>0时，2x-3=a或2x-3=-a，解得x=(3+a)/2或x=(3-a)/2。",
+            "knowledge_points": [
+              "绝对值方程",
+              "参数讨论",
+              "分类思想"
+            ],
+            "difficulty": "medium"
+          }
+        ],
+        "id": "948c57bf-01cd-4e9d-865c-eb0235f965bb",
+        "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+        "model_name": "deterministic-absolute-v1",
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "duration_ms": 0,
+        "created_at": "2026-07-23T07:43:19.978412"
+      }
+    },
+    {
+      "run": 3,
+      "status": 200,
+      "elapsed_ms": 5,
+      "body": {
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "绝对值方程基础巩固",
+            "question": "解方程：|4x-1|=9。",
+            "answer": "x=5/2 或 x=-2。",
+            "solution": "由绝对值定义，4x-1=9或4x-1=-9。分别解得x=5/2或x=-2。将两个解代回，绝对值均为9，所以解集完整。",
+            "knowledge_points": [
+              "绝对值方程",
+              "一元一次方程"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "new_context",
+            "title": "数轴上的定距点",
+            "question": "数轴上点A表示的数为-4，点P表示实数x。已知A、P两点的距离为7个单位长度，求x的所有可能值。",
+            "answer": "x=3 或 x=-11。",
+            "solution": "数轴上两点距离为|x-(-4)|，所以|x-(-4)|=7。因此x-(-4)=7或x-(-4)=-7，解得x=3或x=-11。",
+            "knowledge_points": [
+              "绝对值方程",
+              "数轴上的距离",
+              "一元一次方程"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "challenge",
+            "title": "含参数绝对值方程分类讨论",
+            "question": "已知a为实数，讨论关于x的方程|2x-7|=a在a取不同值时的解，并写出全部解。",
+            "answer": "a<0时无解；a=0时x=7/2；a>0时x=(7+a)/2或x=(7-a)/2。",
+            "solution": "绝对值非负，因此a<0时无解。a=0时绝对值内部必须为0，故x=7/2。a>0时，2x-7=a或2x-7=-a，解得x=(7+a)/2或x=(7-a)/2。",
+            "knowledge_points": [
+              "绝对值方程",
+              "参数讨论",
+              "分类思想"
+            ],
+            "difficulty": "medium"
+          }
+        ],
+        "id": "3e985ebc-fae0-43e3-a275-5239f4b8a895",
+        "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+        "model_name": "deterministic-absolute-v1",
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "duration_ms": 0,
+        "created_at": "2026-07-23T07:43:19.983508"
+      }
+    }
+  ]
+}

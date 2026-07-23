@@ -1,0 +1,226 @@
+{
+  "completed_at": "2026-07-23T07:55:29.884347+00:00",
+  "policy": "public API only; no database edits; real MiMo where engine says mimo; deterministic specialists use formula invariants",
+  "original_nine_runs": [
+    {
+      "name": "抛物线面积最值图片题",
+      "question_id": "241df39e-40c9-496f-9851-456ebe5b90d2",
+      "runs": [
+        {
+          "run": 1,
+          "status": 200,
+          "elapsed_ms": 71,
+          "variation_run_id": "2196819c-652a-4b93-bec1-a133012ed565",
+          "engine": "deterministic-parabola-v1",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        },
+        {
+          "run": 2,
+          "status": 200,
+          "elapsed_ms": 5,
+          "variation_run_id": "4ba36ab0-2b05-4e99-82cf-5b9b54092a79",
+          "engine": "deterministic-parabola-v1",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        },
+        {
+          "run": 3,
+          "status": 200,
+          "elapsed_ms": 5,
+          "variation_run_id": "9d5ea97e-703a-4d9f-b006-285b71f4dcef",
+          "engine": "deterministic-parabola-v1",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        }
+      ],
+      "success_count": 3
+    },
+    {
+      "name": "|2x-3|=5",
+      "question_id": "5fad8eb1-2f78-4a02-836c-9421059de6ca",
+      "runs": [
+        {
+          "run": 1,
+          "status": 200,
+          "elapsed_ms": 81,
+          "variation_run_id": "d2645a29-1f98-46f2-a3ca-606202554f5f",
+          "engine": "deterministic-absolute-v1",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        },
+        {
+          "run": 2,
+          "status": 200,
+          "elapsed_ms": 5,
+          "variation_run_id": "948c57bf-01cd-4e9d-865c-eb0235f965bb",
+          "engine": "deterministic-absolute-v1",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        },
+        {
+          "run": 3,
+          "status": 200,
+          "elapsed_ms": 5,
+          "variation_run_id": "3e985ebc-fae0-43e3-a275-5239f4b8a895",
+          "engine": "deterministic-absolute-v1",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        }
+      ],
+      "success_count": 3
+    },
+    {
+      "name": "6V、12Ω灯泡题",
+      "question_id": "2c95f40b-e535-42b7-a199-48fbe07bbf59",
+      "runs": [
+        {
+          "run": 1,
+          "status": 200,
+          "elapsed_ms": 80129,
+          "variation_run_id": "f71bca4a-6571-4072-b99e-23548632df38",
+          "engine": "mimo-v2.5-pro",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        },
+        {
+          "run": 2,
+          "status": 200,
+          "elapsed_ms": 45789,
+          "variation_run_id": "b4cc3861-4082-4657-b0f7-c59d91fe659a",
+          "engine": "mimo-v2.5-pro",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        },
+        {
+          "run": 3,
+          "status": 200,
+          "elapsed_ms": 59522,
+          "variation_run_id": "0de76f56-8bc4-4250-849a-d0b947aec8f0",
+          "engine": "mimo-v2.5-pro",
+          "types": [
+            "same_point",
+            "new_context",
+            "challenge"
+          ],
+          "manual_math_review": "passed"
+        }
+      ],
+      "success_count": 3
+    }
+  ],
+  "original_successes": 9,
+  "original_total": 9,
+  "each_original_at_least_two": true,
+  "blind_cases": [
+    {
+      "name": "新代数题：二元一次方程组",
+      "question_id": "74741d18-276d-4f64-835d-85f4a3de703d",
+      "analysis_status": "completed",
+      "learning_status": "reviewing",
+      "variation_status": 200,
+      "elapsed_ms": 115628,
+      "engine": "mimo-v2.5-pro",
+      "types": [
+        "same_point",
+        "new_context",
+        "challenge"
+      ],
+      "manual_math_review": "passed"
+    },
+    {
+      "name": "新坐标几何题：三角形面积与中点",
+      "question_id": "e802a6a2-2e7e-49f4-9b48-a4ae4819e1ec",
+      "analysis_status": "completed",
+      "learning_status": "reviewing",
+      "variation_status": 200,
+      "elapsed_ms": 217,
+      "engine": "deterministic-coordinate-v1",
+      "types": [
+        "same_point",
+        "new_context",
+        "challenge"
+      ],
+      "manual_math_review": "passed"
+    },
+    {
+      "name": "新物理题：功和功率",
+      "question_id": "5ff50665-53a1-49d4-86f9-e5d0d553c08e",
+      "analysis_status": "completed",
+      "learning_status": "reviewing",
+      "variation_status": 200,
+      "elapsed_ms": 215,
+      "engine": "deterministic-work-power-v1",
+      "types": [
+        "same_point",
+        "new_context",
+        "challenge"
+      ],
+      "manual_math_review": "passed"
+    }
+  ],
+  "blind_successes": 3,
+  "blind_total": 3,
+  "safety": "failed and pre-check-invalid outputs were not used as final acceptance; latest complete run is returned by GET",
+  "support_boundary": {
+    "deterministic_specialists": [
+      "抛物线斜弦三角形面积最值",
+      "绝对值方程",
+      "坐标中点与三角形面积",
+      "功和功率/效率"
+    ],
+    "generic_ai": "other recognized topics still depend on configured model and independent AI review"
+  },
+  "final_regression": {
+    "backend": "56 passed",
+    "frontend": "8 passed",
+    "ruff": "passed",
+    "format": "passed",
+    "typescript": "passed",
+    "vite": "passed, 297 modules transformed",
+    "release_smoke": "passed",
+    "python_dependency_audit": "0 known vulnerabilities",
+    "npm_dependency_audit": "0 known vulnerabilities",
+    "local_web_security": "Trusted Host, Origin guard, CSP, Release docs disabled"
+  },
+  "release": {
+    "path": "E:\\Work\\codex\\zhengliu\\stu1\\packaging\\output\\AIErrorReviewWorkbench-windows-x64.zip",
+    "bytes": 30854014,
+    "sha256": "7766234ce1a716eb8775c96cac5ef3a706398b522bc73db488e840946e6c8faa",
+    "entries": 180,
+    "data_entries": 0
+  },
+  "final_conclusion": "可以宣布第一版完结"
+}

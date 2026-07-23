@@ -1,0 +1,16 @@
+{
+  "path": "E:\\Work\\codex\\zhengliu\\stu1\\packaging\\output\\AIErrorReviewWorkbench-windows-x64.zip",
+  "bytes": 30854014,
+  "sha256": "7766234ce1a716eb8775c96cac5ef3a706398b522bc73db488e840946e6c8faa",
+  "entries": 180,
+  "data_entries": 0,
+  "required_release_documents": {
+    "AIErrorReviewWorkbench/LICENSE": true,
+    "AIErrorReviewWorkbench/PRIVACY.md": true,
+    "AIErrorReviewWorkbench/SECURITY.md": true,
+    "AIErrorReviewWorkbench/THIRD_PARTY_NOTICES.md": true,
+    "AIErrorReviewWorkbench/sbom/python.cdx.json": true,
+    "AIErrorReviewWorkbench/sbom/frontend.cdx.json": true,
+    "AIErrorReviewWorkbench/sbom/python-licenses.md": true
+  }
+}

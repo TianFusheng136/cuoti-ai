@@ -1,0 +1,51 @@
+{
+  "source": "actual local audit evidence and temporary sanitized model tracing; no API key",
+  "pre_fix_geometry_failures": [
+    "stored failed run: content_verification_failed",
+    "stored failed run: timeout",
+    "stored failed run: content_verification_failed"
+  ],
+  "pre_fix_physics_failures": [
+    "HTTP 502: AI 生成的变式题未通过二次验算：答案计算错误：若标有“6 V 3 W”的灯泡正常发光，其电压为6 V，电阻12 Ω，电流0.5 A。此时标有“6 V 6 W”的灯泡电阻6 Ω，电压3 V，实际功率1.5 W，电源电压9 V，与答案一致。但题目条件为‘其中一个灯泡正常发光’，实际上在串联电路中，由于两个灯泡电阻不同（12 Ω和6 Ω），若电源电压为9 V，总电流0.5 A，两个灯泡的实际电压分别为6 V和3 V，只有电阻大的灯泡（12 Ω）正常发光。然而，题目未指定哪个灯泡正常发光，若假设电阻小的灯泡（6 Ω）正常发光，则其电压应为6 V，电流1 A，此时电阻大的灯泡电压12 V，电源电压18 V，另一个灯泡实际功率12 W。因此，答案不唯一，题目条件不完整导致多解，违反‘答案存在且唯一’的要求。。结果未保存，请重新生成。",
+    "HTTP 502: AI 生成的变式题包含未完成的自我纠错（修正答案），结果未保存，请重试。",
+    "HTTP 502: AI 生成的变式题未通过二次验算：题目描述为‘两个相同的灯泡，每个灯泡正常发光时的电阻为10 Ω’，但串联后总电阻为20 Ω，接在12 V电源上，每个灯泡分得6 V，未达到其‘正常发光’所需的电压（通常认为正常发光时的电压为标称电压，此处未给出，但根据题意‘相同的灯泡’且电阻为10 Ω，无法确定其额定电压）。问题在于，题目求的是‘实际电压和实际功率’，但答案中给出的实际功率3.6 W，如果灯泡正常发光时电阻为10 Ω，其正常发光功率未知（额定电压未知），无法判断6 V是否为其额定电压。这可能导致答案不唯一或无意义，因为未提供灯泡的额定电压，无法确定6 V是否为正常工作状态。因此，条件存在不严谨之处。。结果未保存，请重新生成。"
+  ],
+  "pre_fix_absolute_failures": [
+    "HTTP 502: AI 生成的变式题包含未完成的自我纠错（修正答案），结果未保存，请重试。",
+    "HTTP 502: AI 生成的变式题未通过二次验算：题目要求先写出绝对值方程，再求取值范围，但给出的方程 |x-20|=2 仅表示误差边界，不能直接得出取值范围 18°C ≤ x ≤ 22°C（该范围由不等式 |x-20|≤2 得出）。解析中混淆了等式与不等式，导致逻辑不严谨。。结果未保存，请重新生成。"
+  ],
+  "diagnostic_solver_samples": [
+    {
+      "type": "same_point",
+      "raw_model_content": {
+        "type": "same_point",
+        "solvable": true,
+        "answer_unique": false,
+        "answer": "x = 5/3 或 x = -3",
+        "reasoning": "绝对值方程 |3x+2| = 7 表示 3x+2 = 7 或 3x+2 = -7。解第一个方程得 3x = 5，x = 5/3；解第二个方程得 3x = -9，x = -3。两个解均满足方程，故答案不唯一。"
+      }
+    },
+    {
+      "type": "new_context",
+      "raw_model_content": {
+        "type": "new_context",
+        "solvable": true,
+        "answer_unique": false,
+        "answer": "T = 8 或 T = -2",
+        "reasoning": "题目给定方程 |T - 3| = 5。根据绝对值的定义，方程等价于 T - 3 = 5 或 T - 3 = -5。分别解这两个一元一次方程：1) T - 3 = 5 得 T = 8；2) T - 3 = -5 得 T = -2。因此所有可能的当前温度 T 为 8°C 和 -2°C。两个解均符合题意，故答案不唯一。"
+      }
+    },
+    {
+      "type": "challenge",
+      "raw_model_content": {
+        "type": "challenge",
+        "solvable": true,
+        "answer_unique": false,
+        "answer": "方程 |2x - 3| = a 的解取决于实数 a 的取值范围：\n1. 当 a < 0 时，方程无解，因为绝对值结果非负。\n2. 当 a = 0 时，方程有唯一解：2x - 3 = 0，解得 x = 3/2。\n3. 当 a > 0 时，方程有两个解：\n   - 由 2x - 3 = a，解得 x = (a + 3)/2。\n   - 由 2x - 3 = -a，解得 x = (3 - a)/2。\n综上，方程的全部解为：\n- 若 a < 0，无解；\n- 若 a = 0，解为 x = 3/2；\n- 若 a > 0，解为 x = (a + 3)/2 和 x = (3 - a)/2。",
+        "reasoning": "解绝对值方程 |2x - 3| = a。根据绝对值定义，|表达式| 表示表达式的非负值，因此：\n1. 若 a < 0，方程无解，因为绝对值不能为负。\n2. 若 a = 0，则 2x - 3 = 0，解得 x = 3/2。\n3. 若 a > 0，则 2x - 3 = a 或 2x - 3 = -a，分别解得 x = (a + 3)/2 和 x = (3 - a)/2。\n因此，解的数量取决于 a 的取值，答案不唯一（有不同情况）。",
+        "issues": []
+      }
+    }
+  ],
+  "finding": "answer_unique was interpreted by MiMo as one numeric root, so valid multi-root absolute-value equations were rejected as non-unique."
+}

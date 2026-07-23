@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-07-23T07:56:39.855990+00:00",
+  "after_restart": [
+    {
+      "question_id": "241df39e-40c9-496f-9851-456ebe5b90d2",
+      "analysis": 200,
+      "variations": 200,
+      "variation_engine": "deterministic-parabola-v1",
+      "learning": 200
+    },
+    {
+      "question_id": "5fad8eb1-2f78-4a02-836c-9421059de6ca",
+      "analysis": 200,
+      "variations": 200,
+      "variation_engine": "deterministic-absolute-v1",
+      "learning": 200
+    },
+    {
+      "question_id": "2c95f40b-e535-42b7-a199-48fbe07bbf59",
+      "analysis": 200,
+      "variations": 200,
+      "variation_engine": "mimo-v2.5-pro",
+      "learning": 200
+    },
+    {
+      "question_id": "74741d18-276d-4f64-835d-85f4a3de703d",
+      "analysis": 200,
+      "variations": 200,
+      "variation_engine": "mimo-v2.5-pro",
+      "learning": 200
+    },
+    {
+      "question_id": "e802a6a2-2e7e-49f4-9b48-a4ae4819e1ec",
+      "analysis": 200,
+      "variations": 200,
+      "variation_engine": "deterministic-coordinate-v1",
+      "learning": 200
+    },
+    {
+      "question_id": "5ff50665-53a1-49d4-86f9-e5d0d553c08e",
+      "analysis": 200,
+      "variations": 200,
+      "variation_engine": "deterministic-work-power-v1",
+      "learning": 200
+    }
+  ],
+  "notebook_total": 11,
+  "all_restored": true
+}

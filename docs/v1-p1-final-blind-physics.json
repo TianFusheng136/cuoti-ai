@@ -1,0 +1,60 @@
+{
+  "tested_at": "2026-07-23T07:54:30.168019+00:00",
+  "name": "新物理题：功和功率",
+  "question_id": "5ff50665-53a1-49d4-86f9-e5d0d553c08e",
+  "analysis_status": "completed",
+  "learning_status": "reviewing",
+  "variation": {
+    "status": 200,
+    "elapsed_ms": 215,
+    "body": {
+      "variants": [
+        {
+          "type": "same_point",
+          "title": "水平拉力做功与功率",
+          "question": "用40 N的水平拉力使物体沿水平方向移动12 m，用时6 s。求拉力做的功和功率。",
+          "answer": "拉力做功480 J，功率80 W。",
+          "solution": "力与位移同方向，W=Fs=40×12=480 J。P=W/t=480/6=80 W。",
+          "knowledge_points": [
+            "功的计算",
+            "功率的计算"
+          ],
+          "difficulty": "basic"
+        },
+        {
+          "type": "new_context",
+          "title": "起重机提升重物",
+          "question": "起重机用4000 N的竖直向上恒力，在16 s内把重物竖直提升8 m。求起重机做的功和功率。",
+          "answer": "做功32000 J，功率2000 W。",
+          "solution": "力与位移同方向，W=Fs=4000×8=32000 J。P=W/t=32000/16=2000 W。",
+          "knowledge_points": [
+            "功的计算",
+            "功率的计算",
+            "竖直提升"
+          ],
+          "difficulty": "basic"
+        },
+        {
+          "type": "challenge",
+          "title": "提升机械的有用功与效率",
+          "question": "一台提升机械在20 s内把重为600 N的物体匀速提升8 m，机械的输入功率为300 W。求：（1）有用功；（2）有用功率；（3）机械效率。",
+          "answer": "（1）4800 J；（2）240 W；（3）80%。",
+          "solution": "有用功W有=Gh=600×8=4800 J。有用功率P有=W有/t=4800/20=240 W。机械效率η=P有/P入×100%=240/300×100%=80%。",
+          "knowledge_points": [
+            "有用功",
+            "功率",
+            "机械效率"
+          ],
+          "difficulty": "medium"
+        }
+      ],
+      "id": "c6740228-3b51-4c08-b21a-1729baf3de0a",
+      "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+      "model_name": "deterministic-work-power-v1",
+      "prompt_version": "variation-v4",
+      "schema_version": "variation-schema-v3",
+      "duration_ms": 0,
+      "created_at": "2026-07-23T07:54:30.159888"
+    }
+  }
+}

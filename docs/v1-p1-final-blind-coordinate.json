@@ -1,0 +1,62 @@
+{
+  "tested_at": "2026-07-23T07:51:55.716824+00:00",
+  "name": "新坐标几何题：三角形面积与中点",
+  "question_id": "e802a6a2-2e7e-49f4-9b48-a4ae4819e1ec",
+  "analysis_status": "completed",
+  "learning_status": "reviewing",
+  "variation": {
+    "status": 200,
+    "elapsed_ms": 217,
+    "body": {
+      "variants": [
+        {
+          "type": "same_point",
+          "title": "坐标中点与三角形面积巩固",
+          "question": "在平面直角坐标系中，D(-3,1)、E(5,1)、F(1,5)。（1）求DE中点G的坐标；（2）求△DEF面积。",
+          "answer": "（1）G(1,1)；（2）面积为16。",
+          "solution": "中点横坐标为(-3+5)/2，纵坐标为1，故G(1,1)。DE=8，DE在水平直线上，点F到DE的高为4，所以面积=1/2×8×4=16。",
+          "knowledge_points": [
+            "中点坐标公式",
+            "三角形面积",
+            "坐标几何"
+          ],
+          "difficulty": "basic"
+        },
+        {
+          "type": "new_context",
+          "title": "地图坐标中的中点与区域面积",
+          "question": "某地图以坐标单位表示距离，补给点P(-2,0)、Q(6,0)，观测点R(1,5)。（1）求路线PQ中点S的坐标；（2）求P、Q、R围成的三角形区域面积。",
+          "answer": "（1）S(2,0)；（2）面积为20平方坐标单位。",
+          "solution": "由中点公式得S(2,0)。PQ=8，且PQ水平，R到PQ的高为5，所以区域面积=1/2×8×5=20平方坐标单位。",
+          "knowledge_points": [
+            "中点坐标公式",
+            "三角形面积",
+            "坐标实际应用"
+          ],
+          "difficulty": "basic"
+        },
+        {
+          "type": "challenge",
+          "title": "轴对称点与四边形面积",
+          "question": "在平面直角坐标系中，A(-4,2)、B(6,2)、C(2,5)。点D与C关于直线AB对称。（1）求D的坐标；（2）求四边形ACBD的面积。",
+          "answer": "（1）D(2,-1)；（2）面积为30。",
+          "solution": "直线AB为y=2，C到AB的竖直距离为3，故对称点D(2,-1)。四边形ACBD由共底AB的△ABC和△ABD组成，AB=10，两三角形的高都为3，总面积=2×1/2×10×3=30。",
+          "knowledge_points": [
+            "轴对称",
+            "中点思想",
+            "三角形面积",
+            "坐标几何"
+          ],
+          "difficulty": "medium"
+        }
+      ],
+      "id": "d70f4320-0b4b-4798-84cb-1a4aac8f3ddb",
+      "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+      "model_name": "deterministic-coordinate-v1",
+      "prompt_version": "variation-v4",
+      "schema_version": "variation-schema-v3",
+      "duration_ms": 0,
+      "created_at": "2026-07-23T07:51:55.709822"
+    }
+  }
+}

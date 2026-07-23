@@ -1,0 +1,59 @@
+{
+  "tested_at": "2026-07-23T07:49:19.051482+00:00",
+  "name": "新代数题：二元一次方程组",
+  "question_id": "74741d18-276d-4f64-835d-85f4a3de703d",
+  "analysis_status": "completed",
+  "learning_status": "reviewing",
+  "variation": {
+    "status": 200,
+    "elapsed_ms": 115628,
+    "body": {
+      "variants": [
+        {
+          "type": "same_point",
+          "title": "二元一次方程组求解",
+          "question": "解方程组：\n3x + 2y = 16，\nx - y = 1。\n（其中 x, y 为实数）",
+          "answer": "x = \\frac{18}{5}, y = \\frac{13}{5}",
+          "solution": "方程组为：\n\\[\n\\begin{cases}\n3x + 2y = 16 \\quad (1) \\\\\nx - y = 1 \\quad (2)\n\\end{cases}\n\\]\n将方程 (2) 乘以 2 得：\n\\[\n2x - 2y = 2 \\quad (3)\n\\]\n将方程 (1) 与方程 (3) 相加：\n\\[\n(3x + 2y) + (2x - 2y) = 16 + 2\n\\]\n化简得：\n\\[\n5x = 18\n\\]\n解得：\n\\[\nx = \\frac{18}{5}\n\\]\n将 \\( x = \\frac{18}{5} \\) 代入方程 (2)：\n\\[\n\\frac{18}{5} - y = 1\n\\]\n解得：\n\\[\ny = \\frac{18}{5} - 1 = \\frac{18}{5} - \\frac{5}{5} = \\frac{13}{5}\n\\]\n因此，方程组的解为：\n\\[\nx = \\frac{18}{5}, \\quad y = \\frac{13}{5}\n\\]",
+          "knowledge_points": [
+            "二元一次方程组",
+            "加减消元法"
+          ],
+          "difficulty": "basic"
+        },
+        {
+          "type": "new_context",
+          "title": "文具店购买铅笔和橡皮",
+          "question": "小明去文具店购买铅笔和橡皮。已知购买2支铅笔和1块橡皮共花费7元，购买1支铅笔比购买1块橡皮多花2元。设每支铅笔的价格为x元，每块橡皮的价格为y元（x和y均为正数）。请列出关于x和y的方程组，并求解x和y的值。",
+          "answer": "方程组：\\begin{cases}2x + y = 7 \\\\ x - y = 2\\end{cases}，解得 x = 3，y = 1。",
+          "solution": "设铅笔价格为x元，橡皮价格为y元。根据题意：购买2支铅笔和1块橡皮共花费7元，得方程2x + y = 7；购买1支铅笔比1块橡皮多花2元，得方程x - y = 2。联立方程组，使用加减消元法：将两式相加得3x = 9，解得x = 3。代入x - y = 2得3 - y = 2，解得y = 1。检验：x = 3，y = 1均为正数，且满足原方程，故解正确。",
+          "knowledge_points": [
+            "二元一次方程组",
+            "加减消元法"
+          ],
+          "difficulty": "basic"
+        },
+        {
+          "type": "challenge",
+          "title": "含参数的二元一次方程组与不等式条件",
+          "question": "已知关于x、y的二元一次方程组：x + 2y = 3a - 1 ①，2x - y = 2a + 4 ②，其中a为实数。若方程组的解满足x + y > 2，求实数a的取值范围。",
+          "answer": "a > 9/11",
+          "solution": "解方程组：\\n①+②×2 得：x+2y+4x-2y=3a-1+4a+8，即 5x=7a+7，所以 x=(7a+7)/5。\\n将 x 代入①：(7a+7)/5+2y=3a-1，解得 2y=3a-1-(7a+7)/5=(15a-5-7a-7)/5=(8a-12)/5，所以 y=(4a-6)/5。\\n故方程组的解为 x=(7a+7)/5，y=(4a-6)/5。\\n条件 x+y>2，即 (7a+7)/5+(4a-6)/5>2，化简得 (11a+1)/5>2，两边乘5：11a+1>10，解得 11a>9，即 a>9/11。\\n因此实数 a 的取值范围为 a>9/11。",
+          "knowledge_points": [
+            "二元一次方程组",
+            "加减消元法",
+            "解一元一次不等式"
+          ],
+          "difficulty": "medium"
+        }
+      ],
+      "id": "50e42bb0-5ccd-440b-87a5-3d179f40233e",
+      "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+      "model_name": "mimo-v2.5-pro",
+      "prompt_version": "variation-v4",
+      "schema_version": "variation-schema-v3",
+      "duration_ms": 115457,
+      "created_at": "2026-07-23T07:47:23.589090"
+    }
+  }
+}

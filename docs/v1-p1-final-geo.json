@@ -1,0 +1,183 @@
+{
+  "tested_at": "2026-07-23T07:33:12.835233+00:00",
+  "question_id": "241df39e-40c9-496f-9851-456ebe5b90d2",
+  "runs": [
+    {
+      "run": 1,
+      "status": 200,
+      "elapsed_ms": 71,
+      "body": {
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "斜弦三角形面积最值巩固",
+            "question": "在平面直角坐标系中，抛物线与x轴交于A(-2,0)、B(4,0)，与y轴交于C(0,8)。（1）求抛物线解析式；（2）点P在抛物线弧BC上运动，求△PBC面积的最大值及此时P的坐标。",
+            "answer": "（1）y=-x²+2x+8；（2）最大面积为8，P(2,8)。",
+            "solution": "设y=a(x+2)(x-4)，代入C得a=-1，所以y=-x²+2x+8。设P(x,y_P)，0≤x≤4。直线BC为y=-2x+8。P与BC在同一横坐标处的竖直距离为y_P-y_BC=x(4-x)。用铅锤法得S△PBC=4/2×x(4-x)。配方可知x=2时面积最大，为8；代回抛物线得P(2,8)。",
+            "knowledge_points": [
+              "抛物线解析式",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值"
+            ],
+            "difficulty": "medium"
+          },
+          {
+            "type": "new_context",
+            "title": "景观拱线与斜拉索围成的面积",
+            "question": "某景观的拱线采用抛物线形状，在坐标系中与地面交于A(-2,0)、B(6,0)，并经过立柱顶端C(0,12)。直线BC是一根斜拉索。（1）求拱线解析式；（2）P在拱线弧BC上运动，求拱线点P与拉索两端B、C围成的△PBC面积最大值及P的坐标。",
+            "answer": "（1）y=-x²+4x+12；（2）最大面积为27，P(3,15)。",
+            "solution": "由A、B可设y=a(x+2)(x-6)，代入C得a=-1，故y=-x²+4x+12。拉索BC所在直线为y=-2x+12。设P横坐标为x，0≤x≤6，P到拉索在竖直方向的距离为x(6-x)。铅锤法给出S=6/2×x(6-x)，所以x=3时面积最大，为27，P(3,15)。",
+            "knowledge_points": [
+              "抛物线实际应用",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值"
+            ],
+            "difficulty": "medium"
+          },
+          {
+            "type": "challenge",
+            "title": "斜弦面积最值与面积范围",
+            "question": "在平面直角坐标系中，抛物线与x轴交于A(-1,0)、B(4,0)，与y轴交于C(0,4)。P在抛物线弧BC上运动，△PBC面积记为S。（1）求抛物线解析式和S关于P横坐标x的函数；（2）求S最大值；（3）求S≥6时x的范围。",
+            "answer": "（1）y=-x²+3x+4，S=2x(4-x)（0≤x≤4）；（2）最大值为8；（3）1≤x≤3。",
+            "solution": "由交点式并代入C可得y=-x²+3x+4。直线BC为y=-1x+4。设P横坐标为x，0≤x≤4，P与直线BC的竖直距离为x(4-x)。由铅锤法，S=4/2×x(4-x)=2x(4-x)。当x=2时S最大，为8。解2x(4-x)≥6，得1≤x≤3。",
+            "knowledge_points": [
+              "抛物线解析式",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值",
+              "不等式"
+            ],
+            "difficulty": "hard"
+          }
+        ],
+        "id": "2196819c-652a-4b93-bec1-a133012ed565",
+        "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+        "model_name": "deterministic-parabola-v1",
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "duration_ms": 0,
+        "created_at": "2026-07-23T07:33:12.815664"
+      }
+    },
+    {
+      "run": 2,
+      "status": 200,
+      "elapsed_ms": 5,
+      "body": {
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "斜弦三角形面积最值巩固",
+            "question": "在平面直角坐标系中，抛物线与x轴交于A(-2,0)、B(6,0)，与y轴交于C(0,12)。（1）求抛物线解析式；（2）点P在抛物线弧BC上运动，求△PBC面积的最大值及此时P的坐标。",
+            "answer": "（1）y=-x²+4x+12；（2）最大面积为27，P(3,15)。",
+            "solution": "设y=a(x+2)(x-6)，代入C得a=-1，所以y=-x²+4x+12。设P(x,y_P)，0≤x≤6。直线BC为y=-2x+12。P与BC在同一横坐标处的竖直距离为y_P-y_BC=x(6-x)。用铅锤法得S△PBC=6/2×x(6-x)。配方可知x=3时面积最大，为27；代回抛物线得P(3,15)。",
+            "knowledge_points": [
+              "抛物线解析式",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值"
+            ],
+            "difficulty": "medium"
+          },
+          {
+            "type": "new_context",
+            "title": "景观拱线与斜拉索围成的面积",
+            "question": "某景观的拱线采用抛物线形状，在坐标系中与地面交于A(-2,0)、B(6,0)，并经过立柱顶端C(0,12)。直线BC是一根斜拉索。（1）求拱线解析式；（2）P在拱线弧BC上运动，求拱线点P与拉索两端B、C围成的△PBC面积最大值及P的坐标。",
+            "answer": "（1）y=-x²+4x+12；（2）最大面积为27，P(3,15)。",
+            "solution": "由A、B可设y=a(x+2)(x-6)，代入C得a=-1，故y=-x²+4x+12。拉索BC所在直线为y=-2x+12。设P横坐标为x，0≤x≤6，P到拉索在竖直方向的距离为x(6-x)。铅锤法给出S=6/2×x(6-x)，所以x=3时面积最大，为27，P(3,15)。",
+            "knowledge_points": [
+              "抛物线实际应用",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值"
+            ],
+            "difficulty": "medium"
+          },
+          {
+            "type": "challenge",
+            "title": "斜弦面积最值与面积范围",
+            "question": "在平面直角坐标系中，抛物线与x轴交于A(-1,0)、B(4,0)，与y轴交于C(0,4)。P在抛物线弧BC上运动，△PBC面积记为S。（1）求抛物线解析式和S关于P横坐标x的函数；（2）求S最大值；（3）求S≥6时x的范围。",
+            "answer": "（1）y=-x²+3x+4，S=2x(4-x)（0≤x≤4）；（2）最大值为8；（3）1≤x≤3。",
+            "solution": "由交点式并代入C可得y=-x²+3x+4。直线BC为y=-1x+4。设P横坐标为x，0≤x≤4，P与直线BC的竖直距离为x(4-x)。由铅锤法，S=4/2×x(4-x)=2x(4-x)。当x=2时S最大，为8。解2x(4-x)≥6，得1≤x≤3。",
+            "knowledge_points": [
+              "抛物线解析式",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值",
+              "不等式"
+            ],
+            "difficulty": "hard"
+          }
+        ],
+        "id": "4ba36ab0-2b05-4e99-82cf-5b9b54092a79",
+        "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+        "model_name": "deterministic-parabola-v1",
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "duration_ms": 0,
+        "created_at": "2026-07-23T07:33:12.827423"
+      }
+    },
+    {
+      "run": 3,
+      "status": 200,
+      "elapsed_ms": 5,
+      "body": {
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "斜弦三角形面积最值巩固",
+            "question": "在平面直角坐标系中，抛物线与x轴交于A(-1,0)、B(4,0)，与y轴交于C(0,4)。（1）求抛物线解析式；（2）点P在抛物线弧BC上运动，求△PBC面积的最大值及此时P的坐标。",
+            "answer": "（1）y=-x²+3x+4；（2）最大面积为8，P(2,6)。",
+            "solution": "设y=a(x+1)(x-4)，代入C得a=-1，所以y=-x²+3x+4。设P(x,y_P)，0≤x≤4。直线BC为y=-1x+4。P与BC在同一横坐标处的竖直距离为y_P-y_BC=x(4-x)。用铅锤法得S△PBC=4/2×x(4-x)。配方可知x=2时面积最大，为8；代回抛物线得P(2,6)。",
+            "knowledge_points": [
+              "抛物线解析式",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值"
+            ],
+            "difficulty": "medium"
+          },
+          {
+            "type": "new_context",
+            "title": "景观拱线与斜拉索围成的面积",
+            "question": "某景观的拱线采用抛物线形状，在坐标系中与地面交于A(-3,0)、B(8,0)，并经过立柱顶端C(0,24)。直线BC是一根斜拉索。（1）求拱线解析式；（2）P在拱线弧BC上运动，求拱线点P与拉索两端B、C围成的△PBC面积最大值及P的坐标。",
+            "answer": "（1）y=-x²+5x+24；（2）最大面积为64，P(4,28)。",
+            "solution": "由A、B可设y=a(x+3)(x-8)，代入C得a=-1，故y=-x²+5x+24。拉索BC所在直线为y=-3x+24。设P横坐标为x，0≤x≤8，P到拉索在竖直方向的距离为x(8-x)。铅锤法给出S=8/2×x(8-x)，所以x=4时面积最大，为64，P(4,28)。",
+            "knowledge_points": [
+              "抛物线实际应用",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值"
+            ],
+            "difficulty": "medium"
+          },
+          {
+            "type": "challenge",
+            "title": "斜弦面积最值与面积范围",
+            "question": "在平面直角坐标系中，抛物线与x轴交于A(-3,0)、B(8,0)，与y轴交于C(0,24)。P在抛物线弧BC上运动，△PBC面积记为S。（1）求抛物线解析式和S关于P横坐标x的函数；（2）求S最大值；（3）求S≥48时x的范围。",
+            "answer": "（1）y=-x²+5x+24，S=4x(8-x)（0≤x≤8）；（2）最大值为64；（3）2≤x≤6。",
+            "solution": "由交点式并代入C可得y=-x²+5x+24。直线BC为y=-3x+24。设P横坐标为x，0≤x≤8，P与直线BC的竖直距离为x(8-x)。由铅锤法，S=8/2×x(8-x)=4x(8-x)。当x=4时S最大，为64。解4x(8-x)≥48，得2≤x≤6。",
+            "knowledge_points": [
+              "抛物线解析式",
+              "铅锤法",
+              "三角形面积",
+              "二次函数最值",
+              "不等式"
+            ],
+            "difficulty": "hard"
+          }
+        ],
+        "id": "9d5ea97e-703a-4d9f-b006-285b71f4dcef",
+        "provider_config_id": "a55f0037-5715-4684-a768-a8bd60003208",
+        "model_name": "deterministic-parabola-v1",
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "duration_ms": 0,
+        "created_at": "2026-07-23T07:33:12.832149"
+      }
+    }
+  ]
+}

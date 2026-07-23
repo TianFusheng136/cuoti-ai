@@ -1,0 +1,54 @@
+# 模型服务配置指南
+
+## 安全说明
+
+API Key 通过本地页面发送给 `127.0.0.1` 后端，使用当前 Windows 用户的 DPAPI 加密，密文位于 `data/config/secrets/`。列表接口和页面不会读取或返回 API Key 明文。
+
+更换 Windows 用户或将数据复制到另一台电脑后，需要重新填写 API Key。备份默认不包含密钥。
+
+## OpenAI 兼容接口
+
+适用于声明兼容 OpenAI API 的服务，包括部分 DeepSeek、通义千问和自建网关。
+
+需要按照服务商官方文档填写：
+
+- Base URL：通常应包含服务商要求的版本路径；
+- 模型名称：必须使用服务商实际提供的模型 ID；
+- API Key：由对应服务商签发。
+
+连接测试只调用：
+
+```text
+GET {Base URL}/models
+Authorization: Bearer {API Key}
+```
+
+不同兼容服务的能力并不完全相同。连接成功只表示认证和模型发现可用，不代表已经验证图片输入、JSON Schema 或推理效果。
+
+### 已实测：小米 MiMo 按量付费接口
+
+```text
+Base URL：https://api.xiaomimimo.com/v1
+文本模型：mimo-v2.5-pro
+视觉模型：mimo-v2.5
+```
+
+按量付费密钥和 Token Plan 密钥对应不同地址。Token Plan 用户必须复制套餐页面提供的专属 Base URL，不要照搬上面的按量付费地址。MiMo 兼容接口可能忽略原生 `json_schema` 参数，工作台会在结构不兼容时使用显式 Schema 进行格式修复。
+
+## Gemini 原生接口
+
+默认 Base URL：
+
+```text
+https://generativelanguage.googleapis.com/v1beta
+```
+
+连接测试读取指定模型资源，不发起题目分析。模型名称应以 Gemini 官方文档和当前账号可用模型为准。
+
+## 视觉模型与文本模型
+
+- 视觉模型负责读取图片；
+- 文本模型负责结构化分析；
+- 同一个多模态模型可以分别创建为视觉和文本配置；
+- 只配置文本模型时，图片仍可保存在本机，但不能进行图片识别；
+- 连接测试不会发送题目，也不会验证真实视觉能力。视觉能力将在题目识别阶段单独验证。

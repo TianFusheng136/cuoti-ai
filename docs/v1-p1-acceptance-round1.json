@@ -1,0 +1,501 @@
+{
+  "started_at": "2026-07-23T05:10:01.661274+00:00",
+  "base_url": "http://127.0.0.1:3002/api/v1",
+  "policy": "public APIs only; no database edits; real configured provider",
+  "original_nine_runs": [
+    {
+      "name": "抛物线面积最值图片题",
+      "question_id": "241df39e-40c9-496f-9851-456ebe5b90d2",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 502,
+          "elapsed_ms": 109217,
+          "success": false,
+          "failure": "部分变式题定向重试 3 次后仍未通过：同知识点巩固：题干与原题过于相似，没有形成真实变式。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 2,
+          "http_status": 502,
+          "elapsed_ms": 150597,
+          "success": false,
+          "failure": "部分变式题定向重试 3 次后仍未通过：同知识点巩固：题干与原题过于相似，没有形成真实变式；提高难度：候选题目的解析式计算正确，但面积最值部分涉及复杂的三次函数求导，对初中生超纲（知识点多为二次函数，此题需三次函数求导）。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 3,
+          "http_status": 502,
+          "elapsed_ms": 76120,
+          "success": false,
+          "failure": "部分变式题定向重试 3 次后仍未通过：同知识点巩固：题干与原题过于相似，没有形成真实变式；提高难度：题干与原题过于相似，没有形成真实变式。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        }
+      ],
+      "success_count": 0
+    },
+    {
+      "name": "绝对值方程 |2x-3|=5",
+      "question_id": "5fad8eb1-2f78-4a02-836c-9421059de6ca",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 502,
+          "elapsed_ms": 109910,
+          "success": false,
+          "failure": "部分变式题定向重试 3 次后仍未通过：换场景迁移：题目中‘从A点出发’与 t=0 时距离为3米矛盾，但不影响方程求解。；提高难度：候选答案中的方程表达不完整：'方程 |x - a| + |x - 2| = 有解的条件' 应为 '方程 |x - a| + |x - 2| = 6 有解的条件'，存在笔误。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 2,
+          "http_status": 502,
+          "elapsed_ms": 57794,
+          "success": false,
+          "failure": "部分变式题定向重试 3 次后仍未通过：同知识点巩固：文本模型返回的盲解结构无效。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 3,
+          "http_status": 502,
+          "elapsed_ms": 74479,
+          "success": false,
+          "failure": "部分变式题定向重试 3 次后仍未通过：换场景迁移：文本模型返回的盲解结构无效。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        }
+      ],
+      "success_count": 0
+    },
+    {
+      "name": "6V、12Ω灯泡题",
+      "question_id": "2c95f40b-e535-42b7-a199-48fbe07bbf59",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 200,
+          "elapsed_ms": 65883,
+          "success": true,
+          "variation_run_id": "aa69cf07-01c2-4c90-a2ba-95b9a6d28e7b",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 65876,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "小灯泡额定参数计算",
+              "question": "一只标有“4.5 V”的小灯泡，正常发光时的电阻为15 Ω。假设该灯泡的电阻在额定工作状态下近似为定值。求该小灯泡正常发光时的电流和额定电功率。",
+              "answer": "小灯泡正常发光时的电流为0.3 A，额定电功率为1.35 W。",
+              "solution": "已知小灯泡的额定电压 U = 4.5 V，正常发光时的电阻 R = 15 Ω，且电阻在额定工作状态下近似为定值。根据欧姆定律，正常发光时的电流为 I = U / R = 4.5 V / 15 Ω = 0.3 A。再根据电功率公式 P = U I，可得额定电功率 P = 4.5 V × 0.3 A = 1.35 W。因此，小灯泡正常发光时的电流为 0.3 A，额定电功率为 1.35 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "计算电烙铁的正常工作电流和功率",
+              "question": "一把标有“220 V 40 W”的电烙铁，其电阻丝可视为定值电阻。求该电烙铁在额定电压下正常工作时的电流和实际功率。",
+              "answer": "电流为 2/11 A（约 0.18 A），实际功率为 40 W。",
+              "solution": "根据电烙铁标牌“220 V 40 W”，可知其额定电压 U = 220 V，额定功率 P = 40 W。电阻丝为定值电阻，在额定电压下正常工作时，实际功率等于额定功率，即 P = 40 W。由电功率公式 P = UI 可得电流 I = P / U = 40 W / 220 V = 2/11 A ≈ 0.18 A。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "小灯泡与定值电阻串联电路分析",
+              "question": "一只标有“6 V”的小灯泡正常发光时电阻为12 Ω。将该灯泡与一个阻值为18 Ω的定值电阻串联后接入电路。已知电源电压保持9 V不变，且灯泡的电阻在正常发光时可视为定值。求：(1) 当小灯泡正常发光时，电路中的电流是多少？(2) 此时定值电阻两端的电压是多少？(3) 为了确保灯泡正常发光，电路中是否需要再串联一个分压电阻？如果需要，其阻值应为多少？（忽略温度对灯丝电阻的影响）",
+              "answer": "(1) 0.5 A；(2) 9 V；(3) 需要，阻值为6 Ω。",
+              "solution": "（1）小灯泡正常发光时电压为6 V，电阻为12 Ω，根据欧姆定律，电路中的电流 I = U_L / R_L = 6 V / 12 Ω = 0.5 A。\n（2）灯泡与定值电阻 R = 18 Ω 串联，当灯泡正常发光时，电路中的电流为0.5 A，定值电阻两端的电压 U_R = I × R = 0.5 A × 18 Ω = 9 V。\n（3）灯泡正常发光时，灯泡与定值电阻的总电压 U总 = U_L + U_R = 6 V + 9 V = 15 V，而电源电压仅为9 V，因此现有串联电路无法使灯泡正常发光。为确保灯泡正常发光，需调整电路使灯泡在9 V电源下分得6 V电压。设需串联一个分压电阻 R_x，当电路电流为0.5 A时，总电阻 R总 = U / I = 9 V / 0.5 A = 18 Ω。灯泡电阻为12 Ω，故需要串联的总电阻为6 Ω。由于原电路已有一个18 Ω电阻，需将其替换为6 Ω电阻，即再串联一个6 Ω电阻（同时去掉原18 Ω电阻）以实现总电阻18 Ω。因此，需要再串联一个阻值为6 Ω的分压电阻。",
+              "knowledge_points": [
+                "欧姆定律",
+                "串联电路电压规律",
+                "电功率公式"
+              ],
+              "difficulty": "hard"
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "http_status": 200,
+          "elapsed_ms": 38149,
+          "success": true,
+          "variation_run_id": "2a2be237-c727-4570-89dd-459648c95521",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 38142,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "计算灯泡正常发光时的电流与电功率",
+              "question": "一个标有“3 V”字样的小灯泡，正常发光时灯丝的电阻为6 Ω。假设灯泡灯丝为定值电阻。求该小灯泡正常发光时的电流和电功率。",
+              "answer": "正常发光时的电流为0.5 A，电功率为1.5 W。",
+              "solution": "小灯泡标有“3 V”字样，表示正常发光时的电压U=3 V。已知正常发光时灯丝电阻R=6 Ω（假设为定值电阻）。根据欧姆定律，电流I=U/R=3 V/6 Ω=0.5 A。根据电功率公式P=UI=3 V×0.5 A=1.5 W，或用P=U²/R=(3 V)²/6 Ω=1.5 W。因此，小灯泡正常发光时的电流为0.5 A，电功率为1.5 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "电动自行车前灯参数计算",
+              "question": "一辆电动自行车的前大灯标称工作电压为24 V，在正常发光时，灯泡灯丝的电阻为48 Ω。假设灯丝电阻在正常工作时保持恒定，求该前大灯正常发光时的电流大小和消耗的电功率。",
+              "answer": "电流为0.5 A，电功率为12 W。",
+              "solution": "已知前大灯正常工作电压U = 24 V，灯丝电阻R = 48 Ω。\n根据欧姆定律，正常发光时的电流：\nI = U / R = 24 V / 48 Ω = 0.5 A。\n根据电功率公式，消耗的电功率：\nP = U I = 24 V × 0.5 A = 12 W。\n因此，该前大灯正常发光时的电流为0.5 A，消耗的电功率为12 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "灯泡正常发光与串联电阻",
+              "question": "一只标有“6 V”的小灯泡正常发光时电阻为12 Ω。现将该灯泡与一个定值电阻R串联后，接在电压为9 V的电源上，灯泡恰好能正常发光。假设灯泡电阻在正常发光时保持不变，且不计电源内阻和导线电阻。求：(1) 此时电路中的电流；(2) 定值电阻R的阻值。",
+              "answer": "(1) 0.5 A；(2) 6 Ω。",
+              "solution": "小灯泡正常发光时电压为6 V，电阻为12 Ω，根据欧姆定律，此时电路中的电流 I = U_L / R_L = 6 V / 12 Ω = 0.5 A。由于灯泡与定值电阻R串联，电流相等，所以电路总电流为0.5 A。电源电压为9 V，灯泡分压6 V，则电阻R两端电压 U_R = U_总 - U_L = 9 V - 6 V = 3 V。由欧姆定律，R = U_R / I = 3 V / 0.5 A = 6 Ω。",
+              "knowledge_points": [
+                "欧姆定律",
+                "串联电路电压规律",
+                "额定电压与实际电压"
+              ],
+              "difficulty": "medium"
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "http_status": 200,
+          "elapsed_ms": 17702,
+          "success": true,
+          "variation_run_id": "dcbe9de6-17cb-4c00-84d7-fd530160fd2d",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 17697,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "计算小灯泡的电流与功率",
+              "question": "一个标有“3 V”字样的小灯泡，在正常发光时测得其电阻为6 Ω。已知该灯泡可视为定值电阻，求它正常发光时的电流大小和电功率。",
+              "answer": "正常发光时的电流大小为0.5 A，电功率为1.5 W。",
+              "solution": "小灯泡正常发光时两端的电压U=3 V，电阻R=6 Ω。根据欧姆定律，电流I=U/R=3 V/6 Ω=0.5 A。再根据电功率公式P=UI=3 V×0.5 A=1.5 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "电热水壶的功率与电流",
+              "question": "一个家用电热水壶的额定电压为220 V，其电热丝正常工作时的电阻为48.4 Ω。在使用过程中，假设电热丝的电阻保持不变。求该电热水壶正常工作时的电流和额定功率。",
+              "answer": "正常工作时的电流为4.55 A，额定功率为1000 W。",
+              "solution": "已知电热水壶的额定电压U = 220 V，电热丝电阻R = 48.4 Ω。根据欧姆定律，正常工作时的电流 I = U / R = 220 V / 48.4 Ω ≈ 4.55 A。根据电功率公式，额定功率 P = U² / R = (220 V)² / 48.4 Ω = 48400 V² / 48.4 Ω = 1000 W。因此，电流约为4.55 A，额定功率为1000 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "灯泡串联电路中的功率计算",
+              "question": "一只标有“6 V”的小灯泡L1正常发光时的电阻为12 Ω。将该灯泡与另一个标有“3 V”的小灯泡L2（正常发光时的电阻为6 Ω）串联后，接在电压恒定的电源上。已知电路中电流为0.2 A，且两灯泡均能安全工作。求此时灯泡L1的实际电功率。",
+              "answer": "L1的实际电功率为0.48 W。",
+              "solution": "已知小灯泡L1正常发光时的电阻R1 = 12 Ω，电路中电流I = 0.2 A。由于两灯泡串联，通过L1的电流即为0.2 A。根据电功率公式P = I²R，L1的实际电功率为：\nP1 = I²R1 = (0.2 A)² × 12 Ω = 0.04 A² × 12 Ω = 0.48 W。\n题目指出“两灯泡均能安全工作”，且给出了正常发光时的电阻，在此电流下电阻值视为不变，因此直接使用该电阻进行计算。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式",
+                "串联电路特点"
+              ],
+              "difficulty": "hard"
+            }
+          ]
+        }
+      ],
+      "success_count": 3
+    }
+  ],
+  "blind_cases": [
+    {
+      "name": "新代数题：二元一次方程组",
+      "question_id": "74741d18-276d-4f64-835d-85f4a3de703d",
+      "created": true,
+      "confirmed": true,
+      "analysis": {
+        "status": "completed",
+        "model": "mimo-v2.5-pro",
+        "elapsed_ms": 22255,
+        "final_answer": "x=3，y=1",
+        "knowledge_points": [
+          "二元一次方程组",
+          "加减消元法"
+        ],
+        "solution_steps": [
+          {
+            "step": 1,
+            "content": "将两个方程相加：(2x+y) + (x-y) = 7 + 2",
+            "reason": "观察两个方程，y的系数互为相反数（+1和-1），相加可以消去y。",
+            "knowledge_used": "加减消元法：当两个方程中同一未知数的系数互为相反数时，通过相加可以消去该未知数。"
+          },
+          {
+            "step": 2,
+            "content": "化简方程：2x + y + x - y = 9 → 3x = 9",
+            "reason": "合并同类项，计算方程左边和右边的结果。",
+            "knowledge_used": "整式加减运算，合并同类项。"
+          },
+          {
+            "step": 3,
+            "content": "解出x：3x = 9 → x = 3",
+            "reason": "将方程两边同时除以3，得到x的值。",
+            "knowledge_used": "等式性质：等式两边同时除以同一个非零数，等式仍然成立。"
+          },
+          {
+            "step": 4,
+            "content": "将x=3代入第二个方程：3 - y = 2",
+            "reason": "选择其中一个方程代入已求得的x值，便于求解y。",
+            "knowledge_used": "代入消元法：用一个未知数表示另一个未知数并代入方程求解。"
+          },
+          {
+            "step": 5,
+            "content": "解出y：3 - y = 2 → -y = -1 → y = 1",
+            "reason": "通过移项和化简，求出y的值。",
+            "knowledge_used": "等式性质与解一元一次方程。"
+          }
+        ]
+      },
+      "learning_saved": true,
+      "in_notebook": true,
+      "variation": {
+        "run": 1,
+        "http_status": 200,
+        "elapsed_ms": 47119,
+        "success": true,
+        "variation_run_id": "d41a6c7b-7b7e-461c-9dc3-a0bb9551018e",
+        "model": "mimo-v2.5-pro",
+        "provider_duration_ms": 47113,
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "巩固加减消元法解二元一次方程组",
+            "question": "解方程组：3x + 2y = 13，x - 2y = 5。",
+            "answer": "x=4.5, y=-0.25",
+            "solution": "使用加减消元法解方程组：\\n\\n将方程① 3x + 2y = 13 与方程② x - 2y = 5 相加，消去y项：\\n\\n(3x + 2y) + (x - 2y) = 13 + 5\\n4x = 18\\n解得 x = 4.5\\n\\n将 x = 4.5 代入方程②：\\n4.5 - 2y = 5\\n-2y = 5 - 4.5\\n-2y = 0.5\\n解得 y = -0.25\\n\\n因此方程组的解为 x = 4.5，y = -0.25。",
+            "knowledge_points": [
+              "二元一次方程组",
+              "加减消元法"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "new_context",
+            "title": "购买文具问题",
+            "question": "小明用70元购买了笔记本和钢笔两种文具。已知每本笔记本的价格比每支钢笔的价格贵2元，且他购买了2本笔记本和1支钢笔正好花费了70元。设每本笔记本的价格为x元，每支钢笔的价格为y元。\n(1) 根据题意列出关于x和y的二元一次方程组。\n(2) 使用加减消元法解这个方程组，求出x和y的值。要求：变量x和y均为正实数，且笔记本价格高于钢笔价格。\n(3) 将求得的解代回原方程组，验证是否满足所有条件。",
+            "answer": "(1) 方程组：\\begin{cases} x - y = 2 \\\\ 2x + y = 70 \\end{cases}\n(2) 解：x = 24，y = 22。\n(3) 验证：24 - 22 = 2，2×24 + 22 = 70，且 24 > 22 > 0，满足所有条件。",
+            "solution": "根据题意，笔记本价格比钢笔价格贵2元，可得方程 x - y = 2；购买2本笔记本和1支钢笔花费70元，可得方程 2x + y = 70。因此方程组为 \\begin{cases} x - y = 2 \\\\ 2x + y = 70 \\end{cases}。\n使用加减消元法：将两个方程相加，(x - y) + (2x + y) = 2 + 70，得 3x = 72，解得 x = 24。将 x = 24 代入第一个方程，24 - y = 2，解得 y = 22。\n验证：将 x = 24，y = 22 代入原方程组，第一个方程：24 - 22 = 2 成立；第二个方程：2 × 24 + 22 = 48 + 22 = 70 成立。且 x = 24 > y = 22 > 0，满足笔记本价格高于钢笔价格的条件。因此，解为 x = 24，y = 22。",
+            "knowledge_points": [
+              "二元一次方程组",
+              "加减消元法"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "challenge",
+            "title": "含参数的二元一次方程组求解",
+            "question": "已知关于x、y的方程组：\nax + y = 5\n2x - by = 1\n其中a、b为常数，且a ≠ 0，b ≠ 0。\n（1）若a=1，b=1，求方程组的解。\n（2）若方程组的解为x=2，y=1，求a和b的值。\n（3）在（2）的条件下，求满足方程ax + by = a + b的所有整数对(x, y)。",
+            "answer": "（1）方程组的解为 x=2, y=3。（2）a=2, b=3。（3）所有整数对 (x, y) 为 (4-3k, 2k-1)，其中 k 为任意整数。",
+            "solution": "（1）当 a=1, b=1 时，方程组为：\nx+y=5\n2x-y=1\n两式相加得 3x=6，解得 x=2，代入 x+y=5 得 y=3。\n（2）将 x=2, y=1 代入原方程组：\n2a+1=5，解得 a=2；\n4-b=1，解得 b=3。\n（3）由（2）知 a=2, b=3，代入方程 ax+by=a+b 得 2x+3y=5。\n整理得 x=(5-3y)/2。因为 x, y 为整数，所以 5-3y 必须为偶数，即 3y 为奇数，故 y 为奇数。\n设 y=2k-1（k 为整数），则 x=(5-3(2k-1))/2=4-3k。\n因此所有整数对为 (4-3k, 2k-1)，k∈Z。",
+            "knowledge_points": [
+              "二元一次方程组",
+              "加减消元法",
+              "含参数方程",
+              "整数解"
+            ],
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "review": {
+        "mastery_status": "reviewing",
+        "scheduled_days": 1
+      }
+    },
+    {
+      "name": "新坐标几何题：三角形面积与中点",
+      "question_id": "e802a6a2-2e7e-49f4-9b48-a4ae4819e1ec",
+      "created": true,
+      "confirmed": true,
+      "analysis": {
+        "status": "completed",
+        "model": "mimo-v2.5-pro",
+        "elapsed_ms": 37957,
+        "final_answer": "（1）M(1,1)；（2）△ABC的面积为12。",
+        "knowledge_points": [
+          "平面直角坐标系中点的坐标",
+          "线段中点坐标公式",
+          "三角形面积计算（底和高的确定）"
+        ],
+        "solution_steps": [
+          {
+            "step": 1,
+            "content": "求线段AB的中点M坐标：M = ((-3+5)/2, (1+1)/2) = (1, 1)。",
+            "reason": "应用中点坐标公式：若两点坐标分别为(x1, y1)和(x2, y2)，则中点坐标为((x1+x2)/2, (y1+y2)/2)。",
+            "knowledge_used": "线段中点坐标公式。"
+          },
+          {
+            "step": 2,
+            "content": "分析△ABC：点A(-3,1)和点B(5,1)的纵坐标均为1，因此线段AB平行于x轴，是一条水平线段。",
+            "reason": "通过观察坐标特点，确定AB的位置关系，为选择底边和高做准备。",
+            "knowledge_used": "平面直角坐标系中点的坐标特征。"
+          },
+          {
+            "step": 3,
+            "content": "计算AB的长度：AB = |5 - (-3)| = 8。",
+            "reason": "两点在同一水平线上，底边长为横坐标之差的绝对值。",
+            "knowledge_used": "数轴上两点间距离公式（坐标差绝对值）。"
+          },
+          {
+            "step": 4,
+            "content": "计算点C到直线AB的高：直线AB的方程为y=1，点C(1,4)到该直线的距离为|4-1|=3。",
+            "reason": "点C的纵坐标与AB所在直线y=1的差的绝对值即为该点到AB的垂直距离（高）。",
+            "knowledge_used": "点到水平直线距离的计算（纵坐标差的绝对值）。"
+          },
+          {
+            "step": 5,
+            "content": "计算△ABC的面积：S = (1/2) * 底 * 高 = (1/2) * 8 * 3 = 12。",
+            "reason": "应用三角形面积公式：S = 1/2 * 底 * 高。此处底为AB，高为点C到AB的垂直距离。",
+            "knowledge_used": "三角形面积公式。"
+          }
+        ]
+      },
+      "learning_saved": true,
+      "in_notebook": true,
+      "variation": {
+        "run": 1,
+        "http_status": 502,
+        "elapsed_ms": 78612,
+        "success": false,
+        "failure": "部分变式题定向重试 3 次后仍未通过：提高难度：题干与原题过于相似，没有形成真实变式。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+      },
+      "review": {
+        "mastery_status": "reviewing",
+        "scheduled_days": 1
+      }
+    },
+    {
+      "name": "新物理题：功和功率",
+      "question_id": "5ff50665-53a1-49d4-86f9-e5d0d553c08e",
+      "created": true,
+      "confirmed": true,
+      "analysis": {
+        "status": "completed",
+        "model": "mimo-v2.5-pro",
+        "elapsed_ms": 24341,
+        "final_answer": "拉力做的功为240 J，拉力的功率为60 W。",
+        "knowledge_points": [
+          "功的计算",
+          "功率的计算"
+        ],
+        "solution_steps": [
+          {
+            "step": 1,
+            "content": "已知水平拉力 F = 30 N，物体在拉力方向上移动的距离 s = 8 m。根据功的定义，拉力做的功 W = Fs。",
+            "reason": "功等于力与物体在力的方向上移动距离的乘积。",
+            "knowledge_used": "功的计算公式 W = Fs"
+          },
+          {
+            "step": 2,
+            "content": "代入数据计算：W = 30 N × 8 m = 240 J。",
+            "reason": "进行乘法运算得到功的数值。",
+            "knowledge_used": "公式应用与数值计算"
+          },
+          {
+            "step": 3,
+            "content": "已知做功用时 t = 4 s，拉力做的功 W = 240 J。根据功率的定义，拉力的功率 P = W/t。",
+            "reason": "功率等于功与做功所用时间的比值。",
+            "knowledge_used": "功率的计算公式 P = W/t"
+          },
+          {
+            "step": 4,
+            "content": "代入数据计算：P = 240 J / 4 s = 60 W。",
+            "reason": "进行除法运算得到功率的数值。",
+            "knowledge_used": "公式应用与数值计算"
+          }
+        ]
+      },
+      "learning_saved": true,
+      "in_notebook": true,
+      "variation": {
+        "run": 1,
+        "http_status": 200,
+        "elapsed_ms": 27135,
+        "success": true,
+        "variation_run_id": "b9c5b6b9-898e-4779-b9b8-24b46d2749e9",
+        "model": "mimo-v2.5-pro",
+        "provider_duration_ms": 27129,
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "功与功率计算（基础）",
+            "question": "一个工人用50 N的水平推力，将一个重物沿水平地面匀速推动了10 m，整个过程耗时5 s。求推力对重物所做的功和推力做功的功率。",
+            "answer": "推力对重物所做的功为500 J，推力做功的功率为100 W。",
+            "solution": "推力F=50 N，沿水平方向，位移s=10 m，方向与推力相同，时间t=5 s。由于重物匀速运动，推力为水平推力，故推力做功W=Fs=50 N×10 m=500 J。推力做功的功率P=W/t=500 J/5 s=100 W。",
+            "knowledge_points": [
+              "功的计算",
+              "功率的计算"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "new_context",
+            "title": "拉力做功与功率计算",
+            "question": "一名工人用与水平方向成30°角斜向上的力拉动物体，使物体在水平地面上匀速前进了10 m。已知拉力大小为100 N，物体运动时间为5 s。求该过程中拉力所做的功和拉力做功的功率。",
+            "answer": "拉力所做的功为500√3 J（约866 J），拉力做功的功率为100√3 W（约173.2 W）。",
+            "solution": "拉力 F = 100 N，方向与水平方向成 θ = 30°，物体水平位移 s = 10 m，时间 t = 5 s。拉力做的功 W = F·s·cosθ = 100 N × 10 m × cos30° = 100 × 10 × (√3/2) J = 500√3 J ≈ 866 J。拉力做功的功率 P = W/t = (500√3 J) / 5 s = 100√3 W ≈ 173.2 W。",
+            "knowledge_points": [
+              "功的计算",
+              "功率的计算"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "challenge",
+            "title": "水平拉力做功与功率的变式计算",
+            "question": "小明用30 N的水平拉力，沿水平方向拉一个重500 N的物体，在水平地面上匀速前进了8 m，用时4 s。已知物体与地面间的滑动摩擦力大小为25 N。求：\n（1）拉力做的功。\n（2）拉力做功的功率。\n（3）物体克服摩擦力做的功。",
+            "answer": "（1）拉力做的功为240 J。（2）拉力做功的功率为60 W。（3）物体克服摩擦力做的功为200 J。",
+            "solution": "已知：水平拉力 F = 30 N，位移 s = 8 m，时间 t = 4 s，滑动摩擦力 f = 25 N，重力 G = 500 N（水平运动中不做功）。\n（1）拉力做功：拉力沿水平方向，位移沿水平方向，故 W = Fs = 30 N × 8 m = 240 J。\n（2）拉力做功的功率：P = W / t = 240 J / 4 s = 60 W。\n（3）物体克服摩擦力做的功：物体匀速运动，克服摩擦力做的功等于摩擦力大小与位移的乘积，即 W克f = f s = 25 N × 8 m = 200 J。\n综上，拉力做的功为240 J，功率为60 W，克服摩擦力做的功为200 J。",
+            "knowledge_points": [
+              "功的计算",
+              "功率的计算",
+              "二力平衡",
+              "摩擦力做功"
+            ],
+            "difficulty": "hard"
+          }
+        ]
+      },
+      "review": {
+        "mastery_status": "reviewing",
+        "scheduled_days": 1
+      }
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "app_name": "AI 错题复盘工作台",
+    "api_version": "v1"
+  },
+  "summary": {
+    "original_successes": 3,
+    "original_total": 9,
+    "each_original_at_least_two": false,
+    "blind_successes": 2,
+    "blind_total": 3
+  },
+  "finished_at": "2026-07-23T05:25:39.147094+00:00"
+}

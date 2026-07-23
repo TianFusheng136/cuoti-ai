@@ -1,0 +1,47 @@
+name: Bug报告
+description: 报告可复现的功能或打包问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: 请勿粘贴API Key、真实学生信息或未脱敏日志。安全漏洞请使用仓库Security页面私密报告。
+  - type: input
+    id: version
+    attributes:
+      label: 版本
+      placeholder: v0.1.0或提交哈希
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 运行方式
+      options: [Windows独立Release, Windows开发版]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为与脱敏日志
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已删除API Key、学生身份信息和其他敏感数据
+          required: true

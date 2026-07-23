@@ -1,0 +1,547 @@
+{
+  "started_at": "2026-07-23T06:29:34.943993+00:00",
+  "base_url": "http://127.0.0.1:3002/api/v1",
+  "policy": "public APIs only; no database edits; real configured provider",
+  "original_nine_runs": [
+    {
+      "name": "抛物线面积最值图片题",
+      "question_id": "241df39e-40c9-496f-9851-456ebe5b90d2",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 502,
+          "elapsed_ms": 357097,
+          "success": false,
+          "failure": "部分变式题定向重试 4 次后仍未通过：同知识点巩固：题干变化：将原题中的交点A(-1,0)、B(3,0)、C(0,3)改为A(-2,0)、B(4,0)、C(0,4)，这是一个全新的题目，不是对原题的同点变化，而是改变了所有坐标，导致整个解析式和面积计算不同，因此类型应为'new_context'，而非'same_point'。；提高难度：候选答案与解析中对点P横坐标范围的约束条件（-1/2 ≤ x_P ≤ 2）与最终结论（最大值在x=3/2处取得）不矛盾，但题目要求点P在抛物线弧BC上，原弧BC对应x∈[0,3]，候选题干新增约束x∈[-1/2,2]改变了原始问题的解集范围，这属于改变题目条件，与原始题干不一致。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 2,
+          "http_status": 502,
+          "elapsed_ms": 171989,
+          "success": false,
+          "failure": "部分变式题定向重试 4 次后仍未通过：提高难度：抛物线变式引入了四边形，容易产生顶点顺序或自交歧义。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 3,
+          "http_status": 502,
+          "elapsed_ms": 201768,
+          "success": false,
+          "failure": "部分变式题定向重试 4 次后仍未通过：换场景迁移：题干引用了未提供的图形，不能仅靠文字完整作答；提高难度：题目中 t 的范围与点 P 位于 B、C 之间的描述可能存在歧义，严格按 t∈(-1,3] 计算时面积最大值不存在（上确界为6），但常见题型通常理解为点 P 在弧 BC 上（t∈[0,3]），此时最大值在 t=1.5 取得。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        }
+      ],
+      "success_count": 0
+    },
+    {
+      "name": "绝对值方程 |2x-3|=5",
+      "question_id": "5fad8eb1-2f78-4a02-836c-9421059de6ca",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 502,
+          "elapsed_ms": 128796,
+          "success": false,
+          "failure": "部分变式题定向重试 4 次后仍未通过：提高难度：候选答案第(1)部分中 a=-1 的结果有误。当 a=-1 时，代入 x=2 得 |2×(-1)-1|=|-3|=3，虽然满足 |2a-1|=3，但原方程变为 |-x-1|=3，将 x=2 代入得 |-2-1|=3 成立，故 a=-1 确实使 x=2 成为方程的解，但候选解析中直接由 |2a-1|=3 解得 a=2 或 a=-1 的过程正确，然而原始材料提供的 candidate.answer 中 (1) 的答案是“$a=2$ 或 $a=-1$”，这与我的独立求解一致，但需注意：原始材料的 candidate.answer 字段显示的是“(1) $a=2$ 或 $a=-1$”，我重新求解结果也是 a=2 或 a=-1，二者一致。但仔细核对发现 candidate.answer 文本为“(1) $a=2$ 或 $a=-1$”，而 candidate.solution 的结论是“因此 $a$ 的值为 $2$ 或 $-1$”，二者一致。所以此处并无不一致。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+        },
+        {
+          "run": 2,
+          "http_status": 200,
+          "elapsed_ms": 49695,
+          "success": true,
+          "variation_run_id": "60f0a954-a5fd-4e61-9a28-ed06ea3db078",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 49688,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "巩固绝对值方程解法",
+              "question": "解方程：|3x + 1| = 7。",
+              "answer": "x = 2 或 x = -\\frac{8}{3}",
+              "solution": "解方程 |3x + 1| = 7。根据绝对值的定义，方程等价于 3x + 1 = 7 或 3x + 1 = -7。分别解这两个方程：由 3x + 1 = 7 得 3x = 6，所以 x = 2；由 3x + 1 = -7 得 3x = -8，所以 x = -8/3。经检验，两个解均满足原方程。因此，原方程的解为 x = 2 或 x = -8/3。",
+              "knowledge_points": [
+                "绝对值方程",
+                "一元一次方程"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "数轴上的距离问题",
+              "question": "在数轴上，点A表示的数为2x，点B表示的数为3。已知点A与点B的距离为5，且变量x为实数。请根据点A与点B的距离关系建立方程，并求出所有可能的x值。",
+              "answer": "x = 4 或 x = -1",
+              "solution": "点A表示的数为2x，点B表示的数为3，两点间的距离为5。根据数轴上两点间的距离公式，可得方程 |2x - 3| = 5。解此绝对值方程：2x - 3 = 5 或 2x - 3 = -5。分别求解：当2x - 3 = 5时，2x = 8，解得 x = 4；当2x - 3 = -5时，2x = -2，解得 x = -1。因此，所有可能的x值为 x = 4 或 x = -1。",
+              "knowledge_points": [
+                "绝对值方程",
+                "一元一次方程"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "含参数的绝对值方程求解",
+              "question": "已知关于x的方程|ax - 3| = 5（a为常数，a ≠ 0）有解。（1）求a的取值范围；（2）若a = 1，求该方程的全部解。",
+              "answer": "（1）a的取值范围是a ≠ 0；（2）当a = 1时，方程的全部解为x = 8或x = -2。",
+              "solution": "（1）对于方程|ax - 3| = 5，因为绝对值方程有解当且仅当右边非负，而5 > 0恒成立，所以只要方程ax - 3 = 5或ax - 3 = -5有解即可。由于a ≠ 0，这两个一次方程都有唯一解，因此a的取值范围为a ≠ 0。\n（2）当a = 1时，原方程为|x - 3| = 5，即x - 3 = 5或x - 3 = -5，解得x = 8或x = -2。经检验，两个解均满足原方程，故方程的全部解为x = 8或x = -2。",
+              "knowledge_points": [
+                "绝对值方程",
+                "一元一次方程",
+                "含参方程"
+              ],
+              "difficulty": "medium"
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "http_status": 200,
+          "elapsed_ms": 26393,
+          "success": true,
+          "variation_run_id": "49ac24dd-3e51-47b4-b935-2c6a54ec2946",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 26386,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "解绝对值方程",
+              "question": "解方程：|3x+1|=7。",
+              "answer": "x = 2 或 x = -8/3",
+              "solution": "解方程 |3x+1| = 7。根据绝对值定义，若 |A| = B（B ≥ 0），则 A = B 或 A = -B。因此有 3x+1 = 7 或 3x+1 = -7。\n解第一个方程：3x+1 = 7 → 3x = 6 → x = 2。\n解第二个方程：3x+1 = -7 → 3x = -8 → x = -8/3。\n检验：当 x = 2 时，|3×2+1| = |7| = 7；当 x = -8/3 时，|3×(-8/3)+1| = |-8+1| = |-7| = 7，均满足原方程。\n故原方程的解为 x = 2 或 x = -8/3。",
+              "knowledge_points": [
+                "绝对值方程",
+                "一元一次方程"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "数轴上的距离问题",
+              "question": "在数轴上，点A表示的数为x。已知点A到表示数3的点的距离是5，求x的值。",
+              "answer": "x = 8 或 x = -2",
+              "solution": "点A表示数x，已知点A到表示数3的点的距离是5。在数轴上，两点间的距离等于它们表示的数的差的绝对值，因此有方程 |x - 3| = 5。根据绝对值的定义，可得 x - 3 = 5 或 x - 3 = -5。分别解这两个方程：当 x - 3 = 5 时，x = 8；当 x - 3 = -5 时，x = -2。两个解均符合题意，所以x的值为8或-2。",
+              "knowledge_points": [
+                "绝对值方程",
+                "一元一次方程"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "含参数的绝对值方程求解",
+              "question": "已知关于 x 的方程 |2x - 3| = k，其中 k 是一个非负实数。请分别讨论当 k 取不同值时，方程解的情况，并求出方程的所有解（用含 k 的式子表示）。",
+              "answer": "当 k = 0 时，方程有唯一解 x = 3/2；当 k > 0 时，方程有两个解 x = (3 + k)/2 和 x = (3 - k)/2。",
+              "solution": "方程 |2x - 3| = k 中，由于绝对值非负且 k 是非负实数，根据绝对值的定义，|2x - 3| = k 等价于 2x - 3 = k 或 2x - 3 = -k。解这两个一元一次方程：由 2x - 3 = k 得 2x = 3 + k，故 x = (3 + k)/2；由 2x - 3 = -k 得 2x = 3 - k，故 x = (3 - k)/2。当 k = 0 时，两个方程相同，解均为 x = 3/2，因此方程有唯一解；当 k > 0 时，两个解不同，因此方程有两个解。综上，解的情况如上所述。",
+              "knowledge_points": [
+                "绝对值方程",
+                "一元一次方程",
+                "分类讨论"
+              ],
+              "difficulty": "hard"
+            }
+          ]
+        }
+      ],
+      "success_count": 2
+    },
+    {
+      "name": "6V、12Ω灯泡题",
+      "question_id": "2c95f40b-e535-42b7-a199-48fbe07bbf59",
+      "runs": [
+        {
+          "run": 1,
+          "http_status": 200,
+          "elapsed_ms": 90472,
+          "success": true,
+          "variation_run_id": "7dfc06f8-ae6f-4830-9b1f-c3a158044b54",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 90465,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "额定电压与电阻已知时的电流和电功率计算",
+              "question": "一个标有“12 V”的电热器，其正常工作时的电阻为24 Ω。假设电热器的电阻在工作时保持不变，求该电热器正常工作时的电流和电功率。",
+              "answer": "正常工作时的电流为0.5 A，电功率为6 W。",
+              "solution": "已知电热器正常工作电压U=12 V，电阻R=24 Ω。根据欧姆定律，电流I=U/R=12 V/24 Ω=0.5 A。电功率可以用P=UI=12 V×0.5 A=6 W，或P=U²/R=(12 V)²/24 Ω=6 W计算，结果一致。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "电热水壶的额定功率计算",
+              "question": "一个电热水壶标有“220 V 1000 W”的字样。已知电热水壶内部的电热丝电阻恒定。求该电热水壶在额定电压下正常工作时的电流大小，以及电热丝的电阻值。",
+              "answer": "电流大小为 4.55 A（或 50/11 A），电阻值为 48.4 Ω。",
+              "solution": "电热水壶标有“220 V 1000 W”，表示其额定电压 U = 220 V，额定功率 P = 1000 W。在额定电压下正常工作时，根据电功率公式 P = UI，可得电流 I = P / U = 1000 W / 220 V = 50/11 A ≈ 4.55 A。根据欧姆定律，电热丝电阻 R = U / I = U² / P = (220 V)² / 1000 W = 48400 / 1000 Ω = 48.4 Ω。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "小灯泡串联限流电阻的电路计算",
+              "question": "一只标有“6 V”的小灯泡，其正常发光时的电阻为12 Ω。现在将该小灯泡与一个定值电阻R串联后，接在电压恒为9 V的电源上。当小灯泡正常发光时，求：（1）电路中的电流；（2）定值电阻R的阻值；（3）定值电阻R在1分钟内产生的热量。",
+              "answer": "（1）0.5 A；（2）6 Ω；（3）90 J。",
+              "solution": "小灯泡正常发光时，其两端电压等于额定电压 $U_L = 6\\,\\mathrm{V}$，电阻 $R_L = 12\\,\\Omega$。由欧姆定律，电路中的电流 $I = \\frac{U_L}{R_L} = \\frac{6}{12}\\,\\mathrm{A} = 0.5\\,\\mathrm{A}$。电源电压 $U = 9\\,\\mathrm{V}$，串联电路中定值电阻 $R$ 两端的电压 $U_R = U - U_L = 9\\,\\mathrm{V} - 6\\,\\mathrm{V} = 3\\,\\mathrm{V}$，因此定值电阻的阻值 $R = \\frac{U_R}{I} = \\frac{3}{0.5}\\,\\Omega = 6\\,\\Omega$。定值电阻 $R$ 在 $t = 1\\,\\mathrm{min} = 60\\,\\mathrm{s}$ 内产生的热量 $Q = I^2 R t = (0.5)^2 \\times 6 \\times 60\\,\\mathrm{J} = 90\\,\\mathrm{J}$。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式",
+                "串联电路特点",
+                "焦耳定律"
+              ],
+              "difficulty": "hard"
+            }
+          ]
+        },
+        {
+          "run": 2,
+          "http_status": 200,
+          "elapsed_ms": 77278,
+          "success": true,
+          "variation_run_id": "5381263c-6b3d-4547-b8b1-a34889d98d1f",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 77272,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "小灯泡电流与电功率计算",
+              "question": "一个标有“12 V”的小灯泡，在正常发光时其灯丝电阻为 24 Ω。请计算该小灯泡正常发光时的电流大小和它此时的电功率。",
+              "answer": "电流为0.5 A，电功率为6 W。",
+              "solution": "小灯泡正常发光时，其两端电压为额定电压 U = 12 V，此时灯丝电阻 R = 24 Ω。根据欧姆定律，电流 I = U / R = 12 V / 24 Ω = 0.5 A。电功率 P = U I = 12 V × 0.5 A = 6 W，或使用 P = U² / R = (12 V)² / 24 Ω = 6 W。因此，小灯泡正常发光时的电流为 0.5 A，电功率为 6 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "关于小灯泡的电流和电功率计算",
+              "question": "一个标有“12 V”字样的电热器正常工作时，其内部的电热丝电阻为24 Ω。求该电热器正常工作时的电流和电功率。",
+              "answer": "正常工作时的电流为 0.5 A，电功率为 6 W。",
+              "solution": "电热器正常工作电压为其额定电压 U = 12 V，已知电热丝电阻 R = 24 Ω。由欧姆定律可得电流：I = U / R = 12 V / 24 Ω = 0.5 A。再由电功率公式 P = U I 或 P = U² / R 计算功率：P = 12 V × 0.5 A = 6 W，或 P = (12 V)² / 24 Ω = 6 W。因此，正常工作时电流为 0.5 A，电功率为 6 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "小灯泡在电路中的功率变化",
+              "question": "一只标有“6 V”的小灯泡正常发光时电阻为12 Ω。将其接入一个电压可调的电源上，当电源电压为9 V时，小灯泡的实际功率是多少？假设灯泡的电阻不随温度变化。",
+              "answer": "6.75 W",
+              "solution": "小灯泡正常发光时电压 U₀ = 6 V，电阻 R = 12 Ω。根据欧姆定律，正常发光时电流 I₀ = U₀/R = 6 V / 12 Ω = 0.5 A，额定功率 P₀ = U₀I₀ = 3 W。\n\n题目假设灯泡电阻不随温度变化，即 R = 12 Ω 恒定。当电源电压 U = 9 V 时，灯泡直接接在电源上（题干未提及串联其他元件），灯泡两端电压即为 9 V。由电功率公式，实际功率 P = U²/R = (9 V)² / 12 Ω = 81 / 12 W = 6.75 W。\n\n因此，小灯泡的实际功率为 6.75 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式",
+                "电路分析"
+              ],
+              "difficulty": "medium"
+            }
+          ]
+        },
+        {
+          "run": 3,
+          "http_status": 200,
+          "elapsed_ms": 80535,
+          "success": true,
+          "variation_run_id": "c40c99b8-4a92-4c50-8f82-fa64ee4cf416",
+          "model": "mimo-v2.5-pro",
+          "provider_duration_ms": 80529,
+          "prompt_version": "variation-v4",
+          "schema_version": "variation-schema-v3",
+          "variants": [
+            {
+              "type": "same_point",
+              "title": "小灯泡的电流与电功率计算",
+              "question": "一个标有“4.5 V”字样的小灯泡，在正常发光时测得其电阻为13.5 Ω。假设灯泡电阻在正常发光时为定值，求该小灯泡正常发光时的电流和电功率。",
+              "answer": "正常发光时的电流为0.333 A，电功率为1.5 W。",
+              "solution": "已知灯泡正常发光时的电压U=4.5 V，电阻R=13.5 Ω。根据欧姆定律，电流I=U/R=4.5 V/13.5 Ω=1/3 A≈0.333 A。根据电功率公式P=UI，得电功率P=4.5 V×(1/3 A)=1.5 W。因此，小灯泡正常发光时的电流约为0.333 A，电功率为1.5 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "new_context",
+              "title": "电热器正常工作时的电流与功率计算",
+              "question": "一个电热器标有“220 V 1100 W”的字样（其电阻可视为定值）。当它接在家庭电路中正常工作时，求通过电热器的电流和它的电阻。",
+              "answer": "通过电热器的电流为5 A，电阻为44 Ω。",
+              "solution": "电热器正常工作时，电压为额定电压220 V，功率为额定功率1100 W。根据电功率公式P=UI，通过电热器的电流I = P/U = 1100 W / 220 V = 5 A。再根据欧姆定律U=IR，电热器的电阻R = U/I = 220 V / 5 A = 44 Ω。由于电阻可视为定值，该结果即为所求。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式"
+              ],
+              "difficulty": "basic"
+            },
+            {
+              "type": "challenge",
+              "title": "灯泡与定值电阻串联",
+              "question": "一只标有“6 V 3 W”的小灯泡（假设电阻恒定）与一个定值电阻R0串联后，接在电压恒定的电源两端。当小灯泡恰好正常发光时，测得定值电阻R0两端的电压为3 V。已知电路中的电流处处相等。\n（1）求小灯泡正常发光时的电流。\n（2）求定值电阻R0的阻值。\n（3）求电源电压。\n（4）求此时整个电路消耗的总电功率。",
+              "answer": "（1）0.5 A\n（2）6 Ω\n（3）9 V\n（4）4.5 W",
+              "solution": "（1）小灯泡标有“6 V 3 W”，正常发光时电压为6 V，功率为3 W。由P=UI得，正常发光时的电流 I = P_L / U_L = 3 W / 6 V = 0.5 A。\n（2）电路中电流处处相等，定值电阻R0的电流也为0.5 A，已知R0两端电压U0 = 3 V，由欧姆定律得，R0 = U0 / I = 3 V / 0.5 A = 6 Ω。\n（3）电源电压等于串联电路中各部分电压之和，即U_总 = U_L + U0 = 6 V + 3 V = 9 V。\n（4）整个电路消耗的总电功率 P_总 = U_总 × I = 9 V × 0.5 A = 4.5 W。也可以由各元件功率之和计算：P_总 = P_L + P0 = P_L + I × U0 = 3 W + 0.5 A × 3 V = 3 W + 1.5 W = 4.5 W。",
+              "knowledge_points": [
+                "欧姆定律",
+                "电功率公式",
+                "串联电路特点"
+              ],
+              "difficulty": "hard"
+            }
+          ]
+        }
+      ],
+      "success_count": 3
+    }
+  ],
+  "blind_cases": [
+    {
+      "name": "新代数题：二元一次方程组",
+      "question_id": "74741d18-276d-4f64-835d-85f4a3de703d",
+      "created_in_this_run": false,
+      "first_seen_as_blind_case_in": "docs/v1-p1-acceptance-round1.json",
+      "confirmed": true,
+      "analysis": {
+        "status": "completed",
+        "model": "mimo-v2.5-pro",
+        "elapsed_ms": 0,
+        "final_answer": "x=3，y=1",
+        "knowledge_points": [
+          "二元一次方程组",
+          "加减消元法"
+        ],
+        "solution_steps": [
+          {
+            "step": 1,
+            "content": "将两个方程相加：(2x+y) + (x-y) = 7 + 2",
+            "reason": "观察两个方程，y的系数互为相反数（+1和-1），相加可以消去y。",
+            "knowledge_used": "加减消元法：当两个方程中同一未知数的系数互为相反数时，通过相加可以消去该未知数。"
+          },
+          {
+            "step": 2,
+            "content": "化简方程：2x + y + x - y = 9 → 3x = 9",
+            "reason": "合并同类项，计算方程左边和右边的结果。",
+            "knowledge_used": "整式加减运算，合并同类项。"
+          },
+          {
+            "step": 3,
+            "content": "解出x：3x = 9 → x = 3",
+            "reason": "将方程两边同时除以3，得到x的值。",
+            "knowledge_used": "等式性质：等式两边同时除以同一个非零数，等式仍然成立。"
+          },
+          {
+            "step": 4,
+            "content": "将x=3代入第二个方程：3 - y = 2",
+            "reason": "选择其中一个方程代入已求得的x值，便于求解y。",
+            "knowledge_used": "代入消元法：用一个未知数表示另一个未知数并代入方程求解。"
+          },
+          {
+            "step": 5,
+            "content": "解出y：3 - y = 2 → -y = -1 → y = 1",
+            "reason": "通过移项和化简，求出y的值。",
+            "knowledge_used": "等式性质与解一元一次方程。"
+          }
+        ]
+      },
+      "learning_saved": true,
+      "in_notebook": true,
+      "variation": {
+        "run": 1,
+        "http_status": 200,
+        "elapsed_ms": 91927,
+        "success": true,
+        "variation_run_id": "e4a27c62-f4be-41d9-bfc3-4cd9ccf8137d",
+        "model": "mimo-v2.5-pro",
+        "provider_duration_ms": 91921,
+        "prompt_version": "variation-v4",
+        "schema_version": "variation-schema-v3",
+        "variants": [
+          {
+            "type": "same_point",
+            "title": "解二元一次方程组",
+            "question": "解方程组：\n\\[\\begin{cases} 3x + 2y = 16 \\\\ x - y = 1 \\end{cases}\\]\n其中变量 x, y 均为实数。请使用加减消元法求解，并写出求解过程。",
+            "answer": "方程组的解为 \\(\\begin{cases} x = \\dfrac{18}{5} \\\\ y = \\dfrac{13}{5} \\end{cases}\\)。",
+            "solution": "使用加减消元法求解：\n1. 将第二个方程 \\(x - y = 1\\) 两边乘以 2，得 \\(2x - 2y = 2\\)。\n2. 将变形后的方程与第一个方程 \\(3x + 2y = 16\\) 相加：\\((3x + 2y) + (2x - 2y) = 16 + 2\\)，即 \\(5x = 18\\)，解得 \\(x = \\dfrac{18}{5}\\)。\n3. 将 \\(x = \\dfrac{18}{5}\\) 代入原第二个方程 \\(x - y = 1\\)，得 \\(\\dfrac{18}{5} - y = 1\\)，解得 \\(y = \\dfrac{13}{5}\\)。\n因此，方程组的解为 \\(\\begin{cases} x = \\dfrac{18}{5} \\\\ y = \\dfrac{13}{5} \\end{cases}\\)。",
+            "knowledge_points": [
+              "二元一次方程组",
+              "加减消元法"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "new_context",
+            "title": "购买文具问题",
+            "question": "小明用7元钱购买了2本练习本和1支钢笔。已知购买1本练习本比购买1支钢笔少花2元。设练习本的单价为x元，钢笔的单价为y元（x、y为正数，且x<y）。请列出关于x、y的二元一次方程组，并求解该方程组。",
+            "answer": "x = \\dfrac{5}{3}, y = \\dfrac{11}{3}",
+            "solution": "设练习本的单价为x元，钢笔的单价为y元。根据题意，购买2本练习本和1支钢笔共花7元，得方程：2x + y = 7。购买1本练习本比1支钢笔少花2元，得方程：x = y - 2。联立方程组：\n\\[\n\\begin{cases}\n2x + y = 7 \\\\\nx = y - 2\n\\end{cases}\n\\]\n将第二个方程代入第一个方程：2(y - 2) + y = 7，解得2y - 4 + y = 7，即3y = 11，所以y = \\dfrac{11}{3}。代入x = y - 2得x = \\dfrac{11}{3} - 2 = \\dfrac{5}{3}。经检验，x = \\dfrac{5}{3} > 0，y = \\dfrac{11}{3} > 0，且x < y，符合题意。因此方程组的解为x = \\dfrac{5}{3}, y = \\dfrac{11}{3}。",
+            "knowledge_points": [
+              "二元一次方程组",
+              "加减消元法"
+            ],
+            "difficulty": "basic"
+          },
+          {
+            "type": "challenge",
+            "title": "含参数的二元一次方程组求解",
+            "question": "解关于x和y的方程组：\n2x + y = 7\nx - y = a\n其中a为实数参数。要求：\n1. 用含a的代数式分别表示x和y。\n2. 当x和y均为正整数时，求出参数a的所有可能取值，并写出对应的x和y的值。\n（提示：请先独立求出x、y关于a的表达式，再根据条件进行推理。）",
+            "answer": "1. x = \\frac{7 + a}{3}, y = \\frac{7 - 2a}{3}\n2. 参数a的所有可能取值为-4、-1、2，对应的解为：当a = -4时，x = 1, y = 5；当a = -1时，x = 2, y = 3；当a = 2时，x = 3, y = 1。",
+            "solution": "解方程组：\n2x + y = 7 ... (1)\nx - y = a ... (2)\n\n(1)+(2)得：3x = 7 + a ⇒ x = \\frac{7 + a}{3}。\n代入(2)得：y = x - a = \\frac{7 + a}{3} - a = \\frac{7 + a - 3a}{3} = \\frac{7 - 2a}{3}。\n所以x、y关于a的表达式为x = \\frac{7 + a}{3}, y = \\frac{7 - 2a}{3}。\n\n要使x、y均为正整数，需满足：\n(1) \\frac{7 + a}{3} > 0 ⇒ 7 + a > 0 ⇒ a > -7。\n(2) \\frac{7 - 2a}{3} > 0 ⇒ 7 - 2a > 0 ⇒ a < 3.5。\n(3) 7 + a是3的倍数，即7 + a ≡ 0 (mod 3) ⇒ a ≡ 2 (mod 3)。\n(4) 7 - 2a是3的倍数，即7 - 2a ≡ 0 (mod 3) ⇒ 2a ≡ 1 (mod 3) ⇒ a ≡ 2 (mod 3)。\n因此a需满足a ≡ 2 (mod 3)且-7 < a < 3.5。\n在a为实数参数下，若a取整数，则a的可能整数值为-4、-1、2（因为-7 < a < 3.5内模3余2的整数有-4、-1、2）。\n检验：\n当a = -4时，x = \\frac{7-4}{3} = 1, y = \\frac{7-2×(-4)}{3} = \\frac{15}{3} = 5，均为正整数。\n当a = -1时，x = \\frac{7-1}{3} = 2, y = \\frac{7-2×(-1)}{3} = \\frac{9}{3} = 3，均为正整数。\n当a = 2时，x = \\frac{7+2}{3} = 3, y = \\frac{7-2×2}{3} = \\frac{3}{3} = 1，均为正整数。\n故参数a的所有可能取值为-4、-1、2，对应的x、y值如上。",
+            "knowledge_points": [
+              "二元一次方程组",
+              "加减消元法",
+              "参数问题",
+              "整数解"
+            ],
+            "difficulty": "medium"
+          }
+        ]
+      },
+      "review": {
+        "mastery_status": "reviewing",
+        "scheduled_days": 3
+      }
+    },
+    {
+      "name": "新坐标几何题：三角形面积与中点",
+      "question_id": "e802a6a2-2e7e-49f4-9b48-a4ae4819e1ec",
+      "created_in_this_run": false,
+      "first_seen_as_blind_case_in": "docs/v1-p1-acceptance-round1.json",
+      "confirmed": true,
+      "analysis": {
+        "status": "completed",
+        "model": "mimo-v2.5-pro",
+        "elapsed_ms": 0,
+        "final_answer": "（1）M(1,1)；（2）△ABC的面积为12。",
+        "knowledge_points": [
+          "平面直角坐标系中点的坐标",
+          "线段中点坐标公式",
+          "三角形面积计算（底和高的确定）"
+        ],
+        "solution_steps": [
+          {
+            "step": 1,
+            "content": "求线段AB的中点M坐标：M = ((-3+5)/2, (1+1)/2) = (1, 1)。",
+            "reason": "应用中点坐标公式：若两点坐标分别为(x1, y1)和(x2, y2)，则中点坐标为((x1+x2)/2, (y1+y2)/2)。",
+            "knowledge_used": "线段中点坐标公式。"
+          },
+          {
+            "step": 2,
+            "content": "分析△ABC：点A(-3,1)和点B(5,1)的纵坐标均为1，因此线段AB平行于x轴，是一条水平线段。",
+            "reason": "通过观察坐标特点，确定AB的位置关系，为选择底边和高做准备。",
+            "knowledge_used": "平面直角坐标系中点的坐标特征。"
+          },
+          {
+            "step": 3,
+            "content": "计算AB的长度：AB = |5 - (-3)| = 8。",
+            "reason": "两点在同一水平线上，底边长为横坐标之差的绝对值。",
+            "knowledge_used": "数轴上两点间距离公式（坐标差绝对值）。"
+          },
+          {
+            "step": 4,
+            "content": "计算点C到直线AB的高：直线AB的方程为y=1，点C(1,4)到该直线的距离为|4-1|=3。",
+            "reason": "点C的纵坐标与AB所在直线y=1的差的绝对值即为该点到AB的垂直距离（高）。",
+            "knowledge_used": "点到水平直线距离的计算（纵坐标差的绝对值）。"
+          },
+          {
+            "step": 5,
+            "content": "计算△ABC的面积：S = (1/2) * 底 * 高 = (1/2) * 8 * 3 = 12。",
+            "reason": "应用三角形面积公式：S = 1/2 * 底 * 高。此处底为AB，高为点C到AB的垂直距离。",
+            "knowledge_used": "三角形面积公式。"
+          }
+        ]
+      },
+      "learning_saved": true,
+      "in_notebook": true,
+      "variation": {
+        "run": 1,
+        "http_status": 502,
+        "elapsed_ms": 247982,
+        "success": false,
+        "failure": "部分变式题定向重试 4 次后仍未通过：提高难度：候选答案中第（2）问的结论（所有满足条件的点C的坐标为(x,4)，其中x为任意实数）与原题答案（△ABC的面积为12）本质一致但表述不同。原题已固定点C(1,4)，而候选题将点C设为动点，改变了题目的条件，属于题目条件变化，因此不能视为与原题完全一致。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+      },
+      "review": {
+        "mastery_status": "reviewing",
+        "scheduled_days": 3
+      }
+    },
+    {
+      "name": "新物理题：功和功率",
+      "question_id": "5ff50665-53a1-49d4-86f9-e5d0d553c08e",
+      "created_in_this_run": false,
+      "first_seen_as_blind_case_in": "docs/v1-p1-acceptance-round1.json",
+      "confirmed": true,
+      "analysis": {
+        "status": "completed",
+        "model": "mimo-v2.5-pro",
+        "elapsed_ms": 0,
+        "final_answer": "拉力做的功为240 J，拉力的功率为60 W。",
+        "knowledge_points": [
+          "功的计算",
+          "功率的计算"
+        ],
+        "solution_steps": [
+          {
+            "step": 1,
+            "content": "已知水平拉力 F = 30 N，物体在拉力方向上移动的距离 s = 8 m。根据功的定义，拉力做的功 W = Fs。",
+            "reason": "功等于力与物体在力的方向上移动距离的乘积。",
+            "knowledge_used": "功的计算公式 W = Fs"
+          },
+          {
+            "step": 2,
+            "content": "代入数据计算：W = 30 N × 8 m = 240 J。",
+            "reason": "进行乘法运算得到功的数值。",
+            "knowledge_used": "公式应用与数值计算"
+          },
+          {
+            "step": 3,
+            "content": "已知做功用时 t = 4 s，拉力做的功 W = 240 J。根据功率的定义，拉力的功率 P = W/t。",
+            "reason": "功率等于功与做功所用时间的比值。",
+            "knowledge_used": "功率的计算公式 P = W/t"
+          },
+          {
+            "step": 4,
+            "content": "代入数据计算：P = 240 J / 4 s = 60 W。",
+            "reason": "进行除法运算得到功率的数值。",
+            "knowledge_used": "公式应用与数值计算"
+          }
+        ]
+      },
+      "learning_saved": true,
+      "in_notebook": true,
+      "variation": {
+        "run": 1,
+        "http_status": 502,
+        "elapsed_ms": 209763,
+        "success": false,
+        "failure": "部分变式题定向重试 4 次后仍未通过：提高难度：题干条件与原始材料不同。原始材料为水平匀速直线运动，力为水平方向，无夹角、质量、摩擦因数等条件。候选题目为有夹角、有摩擦的匀加速直线运动，属于全新的情境和难度。。已通过的类型没有重复生成；本次不保存不完整结果，请点击重新生成。"
+      },
+      "review": {
+        "mastery_status": "reviewing",
+        "scheduled_days": 3
+      }
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "app_name": "AI 错题复盘工作台",
+    "api_version": "v1"
+  },
+  "summary": {
+    "original_successes": 5,
+    "original_total": 9,
+    "each_original_at_least_two": false,
+    "blind_successes": 1,
+    "blind_total": 3
+  },
+  "finished_at": "2026-07-23T06:58:28.851444+00:00"
+}
