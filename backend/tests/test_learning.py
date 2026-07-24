@@ -1,6 +1,8 @@
+import asyncio
 import json
 import sqlite3
 from pathlib import Path
+from time import perf_counter
 
 import httpx
 import pytest
@@ -201,6 +203,7 @@ def test_variations_generate_and_verify_each_type_separately(tmp_path: Path) -> 
     assert [item["type"] for item in response.json()["variants"]] == list(VARIANT_TYPES)
     variation_requests = requests[1:]
     assert len(variation_requests) == 12
+    assert all(request.extensions["timeout"]["read"] == 600 for request in variation_requests)
     generation_requests = [
         request for request in variation_requests if "练习题设计老师" in request_text(request)[0]
     ]
@@ -379,6 +382,40 @@ def test_work_power_specialist_avoids_conflicting_force_conditions(tmp_path: Pat
     assert "起重机" in variants[1]["title"]
     assert "效率" in variants[2]["title"]
     assert all("摩擦力" not in item["question"] for item in variants)
+
+
+def test_provider_timeout_cancels_other_variation_types_immediately() -> None:
+    cancelled: list[str] = []
+
+    class FastFailVariationProvider(VariationProvider):
+        async def request_structured(self, **_kwargs: object) -> str:
+            raise AssertionError("测试会覆盖分类型方法，不应发送结构化请求")
+
+        async def generate_verified_type(self, **kwargs: object):  # type: ignore[no-untyped-def]
+            variant_type = str(kwargs["variant_type"])
+            if variant_type == "same_point":
+                await asyncio.sleep(0.01)
+                raise TextProviderError("单次请求等待10分钟仍未返回。", "timeout")
+            try:
+                await asyncio.sleep(0.8)
+            except asyncio.CancelledError:
+                cancelled.append(variant_type)
+                raise
+            return variation_item(variant_type)
+
+    provider = FastFailVariationProvider()
+    started = perf_counter()
+    with pytest.raises(TextProviderError, match="10分钟"):
+        asyncio.run(
+            provider.generate(
+                config=None,  # type: ignore[arg-type]
+                api_key="test-key",
+                analysis=analysis_json(),
+            )
+        )
+
+    assert perf_counter() - started < 0.3
+    assert set(cancelled) == {"new_context", "challenge"}
 
 
 def test_parabola_specialist_rejects_invalid_formula_parameters() -> None:

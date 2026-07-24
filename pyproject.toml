@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ai-error-review-workbench"
-version = "0.1.0"
+version = "0.1.1"
 description = "本地运行的 AI 错题复盘工作台"
 readme = "README.md"
 license = "MIT"

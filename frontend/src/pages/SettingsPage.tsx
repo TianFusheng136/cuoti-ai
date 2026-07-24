@@ -20,7 +20,7 @@ const EMPTY_FORM: ProviderInput = {
   base_url: "",
   api_key: "",
   model_name: "",
-  timeout_seconds: 30,
+  timeout_seconds: 600,
   enabled: true,
 };
 
@@ -162,11 +162,11 @@ export function SettingsPage() {
               <input required value={form.model_name} onChange={(event) => updateForm("model_name", event.target.value)} placeholder="请按服务商文档填写" spellCheck={false} />
             </label>
             <label>超时时间（秒）
-              <input required type="number" min={5} max={300} value={form.timeout_seconds} onChange={(event) => updateForm("timeout_seconds", Number(event.target.value))} />
+              <input required type="number" min={5} max={600} value={form.timeout_seconds} onChange={(event) => updateForm("timeout_seconds", Number(event.target.value))} />
             </label>
           </div>
           <p className="provider-help">
-            DeepSeek、通义千问等服务可选择 OpenAI 兼容接口，但 Base URL 和模型名称必须以对应服务商的官方文档为准。
+            生成三类变式会连续设计和验算多次，文本模型建议设置 600 秒（10 分钟）。旧配置如果经常超时，请点“编辑”改为 600 秒。Base URL 和模型名称以服务商官方文档为准。
           </p>
           {error && <div className="form-message is-error" role="alert">{error}</div>}
           <button className="primary-action full-action" type="submit" disabled={saving}>

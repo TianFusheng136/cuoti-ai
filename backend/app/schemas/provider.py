@@ -34,7 +34,7 @@ class ProviderCreate(BaseModel):
     base_url: str = Field(min_length=1, max_length=500)
     api_key: str = Field(min_length=1, max_length=10_000)
     model_name: str = Field(min_length=1, max_length=200)
-    timeout_seconds: int = Field(default=30, ge=5, le=300)
+    timeout_seconds: int = Field(default=600, ge=5, le=600)
     enabled: bool = True
 
     _normalize_display_name = field_validator("display_name")(normalize_text)
@@ -48,7 +48,7 @@ class ProviderUpdate(BaseModel):
     base_url: str = Field(min_length=1, max_length=500)
     api_key: str | None = Field(default=None, min_length=1, max_length=10_000)
     model_name: str = Field(min_length=1, max_length=200)
-    timeout_seconds: int = Field(default=30, ge=5, le=300)
+    timeout_seconds: int = Field(default=600, ge=5, le=600)
     enabled: bool = True
 
     _normalize_display_name = field_validator("display_name")(normalize_text)

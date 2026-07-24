@@ -134,10 +134,10 @@ export function LearningLoop({ questionId, providerId }: { questionId: string; p
         <div className="variants-heading">
           <div className="analysis-section-title"><span>TRANSFER PRACTICE</span><h2>三类变式练习</h2></div>
           <button className="primary-action" type="button" disabled={generating} onClick={createVariants}>
-            {generating ? "正在生成三道题…" : variationQuery.data ? "重新生成" : "生成变式题"}
+            {generating ? "正在生成，请不要重复点击…" : variationQuery.data ? "重新生成" : "生成变式题"}
           </button>
         </div>
-        <p className="section-help">先独立完成，再展开答案。变式题仍由 AI 生成，请核对题目条件。</p>
+        <p className="section-help">通常需要 30 秒到 3 分钟，遇到定向重试可能更久。请等待生成和验算完成，不要重复点击。</p>
         {error && <div className="form-message is-error">{error}</div>}
         {variationQuery.data ? (
           <div className="variant-grid">

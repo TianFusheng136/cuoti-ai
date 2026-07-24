@@ -60,7 +60,7 @@ def create_app(
 
     app = FastAPI(
         title=APP_NAME,
-        version="0.1.0",
+        version="0.1.1",
         docs_url="/api/docs" if expose_api_docs else None,
         openapi_url="/api/openapi.json" if expose_api_docs else None,
         lifespan=lifespan,

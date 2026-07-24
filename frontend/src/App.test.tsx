@@ -257,7 +257,9 @@ describe("应用骨架", () => {
     render(<App />);
 
     await user.click(screen.getByRole("link", { name: "设置" }));
-    await user.type(await screen.findByLabelText("配置名称"), "DeepSeek 文本模型");
+    expect(await screen.findByLabelText("超时时间（秒）")).toHaveValue(600);
+    expect(screen.getByText(/文本模型建议设置 600 秒/)).toBeInTheDocument();
+    await user.type(screen.getByLabelText("配置名称"), "DeepSeek 文本模型");
     await user.type(screen.getByLabelText("Base URL"), "https://api.example.test/v1");
     await user.type(screen.getByLabelText("API Key"), "secret-key");
     await user.type(screen.getByLabelText("模型名称"), "deepseek-chat");

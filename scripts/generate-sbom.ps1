@@ -13,7 +13,7 @@ New-Item -ItemType Directory -Force -Path $sbom, (Split-Path $runtimeLock) | Out
 
 & uv.exe lock
 if ($LASTEXITCODE -ne 0) { throw "Python 锁文件生成失败。" }
-& uv.exe export --all-extras --format requirements-txt --no-emit-project --output-file (Join-Path $root "requirements-lock.txt")
+& uv.exe export --all-extras --format requirements-txt --no-emit-project --output-file "requirements-lock.txt"
 if ($LASTEXITCODE -ne 0) { throw "Python 构建依赖导出失败。" }
 & uv.exe export --format requirements-txt --no-emit-project --no-hashes --output-file $runtimeLock
 if ($LASTEXITCODE -ne 0) { throw "Python 运行依赖导出失败。" }

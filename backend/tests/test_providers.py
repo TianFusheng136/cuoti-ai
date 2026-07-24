@@ -29,6 +29,18 @@ def provider_payload(**overrides: object) -> dict[str, object]:
     return payload
 
 
+def test_provider_default_timeout_supports_long_model_operations(tmp_path: Path) -> None:
+    app = create_app(data_dir=tmp_path, secret_protector=TestProtector())
+    payload = provider_payload()
+    payload.pop("timeout_seconds")
+
+    with TestClient(app) as client:
+        created = client.post("/api/v1/providers", json=payload)
+
+    assert created.status_code == 201
+    assert created.json()["timeout_seconds"] == 600
+
+
 def test_provider_key_is_encrypted_and_never_returned(tmp_path: Path) -> None:
     app = create_app(data_dir=tmp_path, secret_protector=TestProtector())
 
