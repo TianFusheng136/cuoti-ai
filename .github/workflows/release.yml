@@ -39,7 +39,7 @@ jobs:
         run: .\scripts\build-release.ps1
 
       - name: Attest ZIP provenance
-        uses: actions/attest-build-provenance@v2
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: packaging/output/AIErrorReviewWorkbench-windows-x64.zip
 
